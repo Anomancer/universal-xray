@@ -1,0 +1,115 @@
+{
+  "schema": "bhc.app-manifest/v0.9",
+  "id": "bhc.universal-xray",
+  "name": "BHC Universal X-Ray",
+  "version": "2.2.0-bhc-node.3",
+  "origin": "https://universal-xray.vercel.app",
+  "integration": "native",
+  "capabilities": [
+    "analysis",
+    "claim-decomposition",
+    "evidence",
+    "friction",
+    "native-network-node",
+    "governed-invocation",
+    "replay-guard",
+    "capability-introspection"
+  ],
+  "permissions": [
+    "node:invoke"
+  ],
+  "privacy": {
+    "browserEgress": 0,
+    "networkApi": "explicit-only",
+    "boundary": "The browser UI remains local-first. Server processing occurs only when a caller explicitly invokes the BHC Network API."
+  },
+  "nativeRuntime": {
+    "browserCore": "/universal-core.js",
+    "patternLibrary": "/pattern-library.js",
+    "apiRuntime": "same-deployment VM bridge",
+    "parity": "The API executes the deployment's own browser analyzer rather than a duplicated CORE-side implementation."
+  },
+  "tools": [
+    {
+      "id": "xray.inspect",
+      "transport": "http",
+      "endpoint": "/api/inspect",
+      "method": "POST",
+      "description": "Run Universal X-Ray's native structural analyzer using the app's own deployed browser core.",
+      "input": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100000
+        },
+        "lens": {
+          "type": "string",
+          "required": false
+        }
+      },
+      "permissions": [
+        "node:invoke"
+      ],
+      "capabilities": [
+        "analysis",
+        "claim-decomposition",
+        "evidence"
+      ],
+      "invocation": {
+        "required": true,
+        "schema": "bhc.invocation/v0.9"
+      }
+    },
+    {
+      "id": "xray.health",
+      "transport": "http",
+      "endpoint": "/api/bhc-health",
+      "method": "GET",
+      "description": "Native node health and analyzer self-test.",
+      "input": {},
+      "permissions": [],
+      "capabilities": [
+        "health"
+      ]
+    }
+  ],
+  "invocation": {
+    "required": true,
+    "schema": "bhc.invocation/v0.9",
+    "trustedCaller": "bhc.core",
+    "keyId": "bhc-core-invocation-0.9",
+    "fingerprint": "sha256:1dl3LpgiSFd1a177Jk_qik9Ti1-1vpInnLhp4SneuOA",
+    "replayGuard": "process-local-warm-instance",
+    "maxTimestampSkewMs": 90000,
+    "note": "Warm-instance replay cache is not a globally durable nonce database."
+  },
+  "resources": [
+    {
+      "id": "capability.introspection",
+      "url": "/.well-known/bhc-capabilities.json",
+      "type": "bhc.capability-introspection/v0.9"
+    },
+    {
+      "id": "node.health",
+      "url": "/api/bhc-health",
+      "type": "bhc.node-health/v0.9"
+    }
+  ],
+  "integrity": {
+    "scheme": "bhc.manifest-signature/v0.3",
+    "algorithm": "ECDSA-P256-SHA256",
+    "keyId": "universal-xray-native-2.2",
+    "fingerprint": "sha256:y7WqfiL-uDIfGIK5bJ3wrQtqL5qyzjAEqrmarMP-P04",
+    "publicKeyJwk": {
+      "key_ops": [
+        "verify"
+      ],
+      "ext": true,
+      "kty": "EC",
+      "x": "SRUwNJYFWVUExZc_WYMEXaP6h1bcLk_1Ovio4hZ8XDs",
+      "y": "uf7IEgZ2nyXRA5XSlo7rPtFh6kyT7yoh-4_-haAINHk",
+      "crv": "P-256"
+    },
+    "signature": "DjONNRckal5dzMdBKMQbbtaCjxDxfPBYdkwbIsJAVbASOQtcC9sC6oCdQAZATO5YNiBI1d_rsX0kRdtNiIwkdA"
+  }
+}

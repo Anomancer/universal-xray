@@ -1,0 +1,51 @@
+{
+  "schema": "bhc.capability-introspection/v0.9",
+  "id": "bhc.universal-xray",
+  "version": "2.2.0-bhc-node.3",
+  "capabilities": [
+    "analysis",
+    "claim-decomposition",
+    "evidence",
+    "friction",
+    "native-network-node",
+    "governed-invocation"
+  ],
+  "tools": [
+    {
+      "id": "xray.inspect",
+      "method": "POST",
+      "endpoint": "/api/inspect",
+      "permission": "node:invoke",
+      "invocation": {
+        "required": true,
+        "schema": "bhc.invocation/v0.9",
+        "caller": "bhc.core",
+        "keyId": "bhc-core-invocation-0.9",
+        "fingerprint": "sha256:1dl3LpgiSFd1a177Jk_qik9Ti1-1vpInnLhp4SneuOA"
+      }
+    },
+    {
+      "id": "xray.health",
+      "method": "GET",
+      "endpoint": "/api/bhc-health",
+      "permission": null
+    }
+  ],
+  "integrity": {
+    "scheme": "bhc.manifest-signature/v0.3",
+    "algorithm": "ECDSA-P256-SHA256",
+    "keyId": "universal-xray-native-2.2",
+    "fingerprint": "sha256:y7WqfiL-uDIfGIK5bJ3wrQtqL5qyzjAEqrmarMP-P04",
+    "publicKeyJwk": {
+      "key_ops": [
+        "verify"
+      ],
+      "ext": true,
+      "kty": "EC",
+      "x": "SRUwNJYFWVUExZc_WYMEXaP6h1bcLk_1Ovio4hZ8XDs",
+      "y": "uf7IEgZ2nyXRA5XSlo7rPtFh6kyT7yoh-4_-haAINHk",
+      "crv": "P-256"
+    },
+    "signature": "VbSeSKTfcbezOC9VzH5_ErmTHfzPSX_HAUpx4gt-w_aAL8_pcnlz9dtEUOnWlRxXQXpalxzDFHIbXF_1oSWNcw"
+  }
+}

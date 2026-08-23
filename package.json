@@ -1,0 +1,11 @@
+{
+  "name": "bhc-universal-xray-native-node-patch",
+  "version": "2.1.0-bhc-node.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/native-runtime.test.mjs && node tests/api.test.mjs",
+    "verify": "node tools/verify-manifest.mjs",
+    "check": "npm test && npm run verify"
+  }
+}

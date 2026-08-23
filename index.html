@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#02070d" name="theme-color"/>
+<meta content="BHC Universal X-Ray — local-first harm-reduction and manipulation-pattern laboratory." name="description"/>
+<title>BHC Universal X-Ray 2.0.0</title>
+<link href="icon.svg" rel="icon" type="image/svg+xml"/>
+<link href="manifest.webmanifest" rel="manifest"/>
+<link href="styles.css" rel="stylesheet"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body data-screen="home" data-skin="on">
+<a class="skip-link" href="#mainContent">Siirry pääsisältöön</a>
+<div class="site-shell">
+<header class="site-header">
+<div class="brand-row">
+<a aria-label="BHC Universal X-Ray etusivulle" class="brand" data-route="home" href="#home"><span aria-hidden="true" class="brand-rail"></span><span class="brand-copy"><small>BLACK HOLE CORE</small><strong>Universal X-Ray</strong><em>STABLE · 2.0.0</em></span></a>
+<div class="header-actions">
+<label class="lens-control" title="Suodata näkyviä tuloskerroksia epistemisen tyypin mukaan">
+<span>X-RAY LENS</span>
+<select aria-label="X-Ray Lens -tuloskerros" id="evidenceLens">
+<option value="all">Kaikki</option>
+<option value="empirical">Mittaus / laskenta / simulaatio</option>
+</select>
+</label>
+<span class="system-chip"><b>EGRESS 0</b><span>LOCAL</span></span>
+<button aria-controls="engineDrawer" aria-pressed="false" class="icon-button" id="skinToggle" type="button"><span aria-hidden="true">XR</span><b>Iho</b></button>
+<button aria-controls="mobileNav" aria-expanded="false" class="icon-button menu-button" id="menuToggle" type="button"><span aria-hidden="true">MENU</span><b>Valikko</b></button>
+</div>
+</div>
+<nav aria-label="Päänavigaatio" class="main-nav" id="mainNav"><a class="active" data-route="home" href="#home">Koti</a><a data-route="casino" href="#casino">Casino</a><a data-route="odds" href="#odds">Odds</a><a data-route="market" href="#market">Market</a><a data-route="dependency" href="#dependency">Dependency</a><a data-route="impulse" href="#impulse">Impulse</a><a data-route="universal" href="#universal">Universal</a><a data-route="friction" href="#friction">Friction</a><a data-route="patterns" href="#patterns">Atlas</a><a data-route="outcomes" href="#outcomes">Outcome</a><a data-route="journal" href="#journal">Journal</a><a data-route="calm" href="#calm">Calm</a><a data-route="intercept" href="#intercept">Intercept</a><a data-route="vault" href="#vault">Vault</a></nav>
+
+
+</header><div class="mobile-nav-backdrop" hidden="" id="mobileNavBackdrop"></div><nav aria-hidden="true" aria-label="Mobiilinavigaatio" class="mobile-nav" hidden="" id="mobileNav" tabindex="-1"><div class="mobile-nav-head"><div><small>NAVIGATION</small><strong>Universal X-Ray</strong></div><button aria-label="Sulje valikko" class="mobile-nav-close" id="mobileNavClose" type="button">CLOSE</button></div><label class="mobile-nav-lens"><span>X-RAY LENS</span><select aria-label="Mobiilin X-Ray Lens -tuloskerros" id="mobileEvidenceLens"><option value="all">Kaikki</option><option value="empirical">Mittaus / laskenta / simulaatio</option></select></label><div class="mobile-nav-grid"><a data-route="home" href="#home">Koti</a><a data-route="casino" href="#casino">Casino</a><a data-route="odds" href="#odds">Odds</a><a data-route="market" href="#market">Market</a><a data-route="dependency" href="#dependency">Dependency</a><a data-route="impulse" href="#impulse">Impulse</a><a data-route="universal" href="#universal">Universal</a><a data-route="friction" href="#friction">Friction</a><a data-route="patterns" href="#patterns">Atlas</a><a data-route="outcomes" href="#outcomes">Outcome</a><a data-route="journal" href="#journal">Journal</a><a data-route="calm" href="#calm">Calm</a><a data-route="intercept" href="#intercept">Intercept</a><a data-route="vault" href="#vault">Vault</a><a data-route="settings" href="#settings">Asetukset</a></div></nav>
+<main id="mainContent" tabindex="-1">
+<section aria-labelledby="homeTitle" class="screen active" data-screen="home" id="home">
+<div class="hero panel">
+<div aria-label="Agentti R-01, sport division" class="agent agent-left">
+<div class="agent-status"><span>R-01</span><b>SPORT DIVISION</b></div>
+<img alt="BHC-pesukarhuagentti mustassa paidassa, punaisissa shortseissa ja vesipullo kädessä" src="assets/agent-r01.png"/>
+</div>
+<div class="hero-core">
+<p class="eyebrow">BHC UNIVERSAL X-RAY · 2.0.0 · STABLE</p>
+<h1 id="homeTitle">Näe mekanismi.<br/><span>Ota toimijuus takaisin.</span></h1>
+<p class="hero-lede">Riippuvuussilmukat, uhkapelimatematiikka, markkinahype ja manipuloivat rakenteet samassa paikallisessa röntgenlaboratoriossa.</p>
+<div class="hero-actions">
+<a class="primary-button" data-route="casino" href="#casino">Avaa Casino X-Ray</a>
+<a class="secondary-button" data-route="universal" href="#universal">Skannaa rakenne</a>
+</div>
+<div aria-label="Järjestelmän tila" class="hero-metrics">
+<div><span>NETWORK</span><strong id="networkMetric">LOCAL</strong></div>
+<div><span>STORAGE</span><strong id="storageMetric">READY</strong></div>
+<div><span>MODULES</span><strong id="moduleMetric">14 / 14</strong></div>
+</div>
+</div>
+<div aria-label="Agentti R-02, intel division" class="agent agent-right">
+<div class="agent-status"><span>R-02</span><b>INTEL DIVISION</b></div>
+<img alt="BHC-pesukarhuagentti tummissa katuvaatteissa ja kahvikuppi kädessä" src="assets/agent-r02.png"/>
+</div>
+</div>
+<div class="privacy-strip panel">
+<div class="privacy-mark">0</div>
+<div><p class="eyebrow">APP EGRESS</p><h2>Nolla analytiikkaa. Nolla ulkoista käyttäjädatan lähetystä.</h2><p>Laskenta, heuristiikat, Journal ja simulaatiot ajetaan tässä selainversiossa paikallisesti. Service Worker hakee vain saman originin sovellustiedostoja.</p></div>
+</div>
+<div aria-label="BHC X-Ray moduulit" class="launcher">
+<a class="app-card" data-route="casino" href="#casino"><span class="app-icon">777</span><b>Casino X-Ray</b><small>RTP · EV · LDIW · simulaatio</small></a><a class="app-card" data-route="odds" href="#odds"><span class="app-icon">1/X</span><b>Odds X-Ray</b><small>Pitkäveto · yhdistelmät · lotto · ravit</small></a><a class="app-card" data-route="market" href="#market"><span class="app-icon">▥</span><b>Market X-Ray</b><small>Kynttilät · null-baseline · kulut · vipu</small></a>
+<a class="app-card" data-route="dependency" href="#dependency"><span class="app-icon">◎</span><b>Dependency Lab</b><small>Trigger → urge → toiminta → palkkio → jälkivaikutus</small></a>
+<a class="app-card" data-route="impulse" href="#impulse"><span class="app-icon">ϟ</span><b>Impulse Breaker</b><small>Viive · vaihtoehto · toimijuus</small></a>
+<a class="app-card" data-route="universal" href="#universal"><span class="app-icon">⌖</span><b>Universal X-Ray</b><small>Väitteet · tuki · oletukset · Claim Graph</small></a>
+<a class="app-card" data-route="journal" href="#journal"><span class="app-icon">▤</span><b>Journal</b><small>Himo · mieliala · uni · tapahtumat</small></a>
+<a class="app-card" data-route="calm" href="#calm"><span class="app-icon">∿</span><b>Calm Room</b><small>Hiljainen visuaali · hengitystahti</small></a>
+<a class="app-card" data-route="friction" href="#friction"><span class="app-icon">⧖</span><b>Friction Lab</b><small>Omat kitkasäännöt · viive · check · vaihtoehto</small></a>
+<a class="app-card" data-route="intercept" href="#intercept"><span class="app-icon">◎</span><b>X-Ray Intercept</b><small>Opt-in active-tab WebExtension · overlay</small></a>
+<a class="app-card" data-route="patterns" href="#patterns"><span class="app-icon">⌘</span><b>Pattern Atlas</b><small>Mekanismikartta · passportit · kitkaehdotukset</small></a>
+<a class="app-card" data-route="outcomes" href="#outcomes"><span class="app-icon">↺</span><b>Outcome Lab</b><small>Kitka → päätös → outcome → kuvaileva oppiminen</small></a>
+<a class="app-card" data-route="vault" href="#vault"><span class="app-icon">◇</span><b>System Vault</b><small>Varmuuskopio · palautus · datan elinkaari</small></a>
+<button class="app-card button-card" id="openEngine" type="button"><span class="app-icon">◐</span><b>Engine Room</b><small>Runtime · provenance · moduulirekisteri</small></button>
+</div>
+<div class="dashboard-grid">
+<article class="panel metric-card"><p class="eyebrow">LOCAL STATE</p><strong id="journalCountMetric">0</strong><span>journal-merkintää</span></article>
+<article class="panel metric-card"><p class="eyebrow">LAST CASINO RUN</p><strong id="lastCasinoMetric">—</strong><span>nettotulos</span></article>
+<article class="panel metric-card"><p class="eyebrow">LAST X-RAY</p><strong id="lastScanMetric">—</strong><span>havaittua kuviota</span></article>
+</div>
+</section>
+<section aria-labelledby="casinoTitle" class="screen" data-screen="casino" id="casino">
+<div class="section-head">
+<div><p class="eyebrow">CASINO X-RAY</p><h1 id="casinoTitle">Iho pois kasinomatematiikasta.</h1><p>Synteettinen simulaattori näyttää odotusarvon ja satunnaisvaihtelun erikseen. Se ei mallinna tietyn kasinon peliä eikä ennusta seuraavaa kierrosta.</p></div>
+</div>
+<div class="two-col">
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">SIMULATOR</p><h2>RTP / EV -penkki</h2></div><span class="status-dot">READY</span></div>
+<form class="form-grid" id="casinoForm">
+<label><span>RTP (%)</span><input id="casinoRtp" max="100" min="50" required="" step="0.1" type="number" value="95"/></label>
+<label><span>Panos / kierros (€)</span><input id="casinoStake" max="10000" min="0.01" required="" step="0.01" type="number" value="1"/></label>
+<label><span>Kierrokset / ajo</span><select id="casinoSpins"><option value="10000">10 000</option><option selected="" value="100000">100 000</option><option value="1000000">1 000 000</option></select></label>
+<label><span>Rinnakkaiset ajot</span><select id="casinoRuns"><option value="1">1</option><option selected="" value="10">10</option><option value="25">25</option><option value="50">50</option></select></label>
+<label><span>Synteettinen volatiliteetti</span><select id="casinoVolatility"><option value="low">Matala</option><option selected="" value="medium">Keskitaso</option><option value="high">Korkea</option></select></label>
+<label><span>Alkubudjetti (€)</span><input id="casinoBankroll" max="10000000" min="1" required="" step="1" type="number" value="1000"/></label>
+<label><span>Kierrosta / minuutti</span><input id="casinoSpeed" max="120" min="1" required="" step="1" type="number" value="12"/></label>
+<div class="form-readout"><span>Laskennallinen house edge</span><strong id="houseEdgePreview">5,0 %</strong></div>
+<button class="primary-button full" type="submit">Aja X-Ray -simulaatiot</button>
+</form>
+<p class="microcopy">Jakaumat ovat synteettisiä ja skaalataan valittuun RTP:hen. Volatiliteettiasetus muuttaa voittojen frekvenssiä ja kokoa, ei house edgeä. Enintään 5 miljoonaa kierrosta ajetaan yhdellä painalluksella.</p>
+</article>
+<article class="panel xray-panel">
+<div class="panel-head"><div><p class="eyebrow">X-RAY OUTPUT</p><h2>Raaka rakenne</h2></div><span class="status-badge" id="casinoRunStatus">EI AJETTU</span></div>
+<div class="result-grid four">
+<div class="evidence-layer" data-evidence="calculated"><span>House edge <i class="evidence-badge calculated">CALCULATED</i></span><strong id="houseEdge">—</strong></div>
+<div class="evidence-layer" data-evidence="calculated"><span>Teoreettinen EV / ajo <i class="evidence-badge calculated">CALCULATED</i></span><strong id="theoreticalEv">—</strong></div>
+<div class="evidence-layer" data-evidence="simulated"><span>Mediaani netto <i class="evidence-badge simulated">SIMULATED</i></span><strong id="simNet">—</strong></div>
+<div class="evidence-layer" data-evidence="simulated"><span>Voitollisia ajoja <i class="evidence-badge simulated">SIMULATED</i></span><strong id="profitableRuns">—</strong></div>
+<div class="evidence-layer" data-evidence="simulated"><span>Budjetti olisi rikkoutunut <i class="evidence-badge simulated">SIMULATED</i></span><strong id="ruinRuns">—</strong></div>
+<div class="evidence-layer" data-evidence="simulated"><span>P10 → P90 netto <i class="evidence-badge simulated">SIMULATED</i></span><strong id="netRange">—</strong></div>
+<div class="evidence-layer" data-evidence="simulated"><span>LDIW / ajo <i class="evidence-badge simulated">SIMULATED</i></span><strong id="ldiwCount">—</strong></div>
+<div class="evidence-layer" data-evidence="calculated"><span>Aika / ajo <i class="evidence-badge calculated">CALCULATED</i></span><strong id="sessionTime">—</strong></div>
+</div>
+<div class="chart-wrap"><canvas aria-label="Simuloidun saldon kehitys" height="360" id="casinoChart" width="900"></canvas></div>
+<div class="strip-result" id="casinoInterpretation">Aja simulaatiot nähdäksesi teoreettisen odotusarvon, yhden satunnaisreitin ja rinnakkaisten ajojen jakauman.</div>
+</article>
+</div>
+<div class="lab-grid section-gap">
+<article class="panel info-card evidence-layer" data-evidence="calculated"><p class="eyebrow">LOSS DISGUISED AS WIN <i class="evidence-badge calculated">CALCULATED</i></p><h3>Positiivinen animaatio voi peittää nettotappion.</h3><p>Jos panos on 2 € ja palautus 0,50 €, taloudellinen tulos on −1,50 €, vaikka käyttöliittymä juhlistaisi “voittoa”. Tässä simulaatiossa LDIW = palautus &gt; 0 mutta palautus &lt; panos.</p></article>
+<article class="panel info-card evidence-layer" data-evidence="simulated"><p class="eyebrow">NEAR-MISS PURKU <i class="evidence-badge simulated">SIMULATED</i></p><h3>Testaa ennustaako “melkein” seuraavaa kierrosta.</h3><p>Demo arpoo riippumattomia kierroksia ja vertaa seuraavan riippumattoman osuman taajuutta near-missin jälkeen baselineen.</p><button class="ghost-button" id="nearMissDemo" type="button">Aja 200 000 parin testi</button><p id="nearMissOutput">Ei ajettu.</p></article>
+<article class="panel info-card evidence-layer" data-evidence="calculated"><p class="eyebrow">SUNK COST <i class="evidence-badge calculated">CALCULATED</i></p><h3>Menneeseen tappioon ei synny takaisinmaksuodotusta.</h3><div class="inline-form"><input aria-label="Jo hävitty summa euroissa" id="sunkPastLoss" min="0" step="1" type="number" value="500"/><input aria-label="Suunniteltu lisäpanostus euroissa" id="sunkFutureWager" min="0" step="1" type="number" value="1000"/></div><p id="sunkOutput">—</p></article>
+<article class="panel info-card evidence-layer" data-evidence="calculated"><p class="eyebrow">REALITY TRANSLATOR <i class="evidence-badge calculated">CALCULATED</i></p><h3>Käännä tappio muuksi resurssiksi.</h3><div class="inline-form"><input aria-label="Tappio euroissa" id="realityLoss" min="0" step="1" type="number" value="120"/><input aria-label="Oman tunnin arvo euroissa" id="hourValue" min="1" step="1" type="number" value="15"/></div><p id="realityOutput">120 € = 8,0 tuntia, jos oman tunnin arvoksi asetetaan 15 €/h.</p></article>
+</div>
+</section><section aria-labelledby="oddsTitle" class="screen" data-screen="odds" id="odds">
+<div class="section-head"><div><p class="eyebrow">ODDS X-RAY</p><h1 id="oddsTitle">Kerroin on hinta. Puretaan mitä sen sisällä on.</h1><p>Sportsbookin marginaali, yhdistelmävedon kertautuminen, loton jackpot-salience ja ravien pari-mutuel-pooli samassa kylmässä laskupenkissä. Ei vihjeitä eikä voittajaennusteita.</p></div></div>
+<div class="odds-grid">
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">SPORTSBOOK MARGIN <i class="evidence-badge calculated">CALCULATED</i></p><h2>Overround näkyviin</h2></div></div>
+<form class="form-grid" id="oddsMarginForm">
+<label class="full"><span>Desimaalikertoimet samasta markkinasta</span><textarea id="oddsMarketInput" rows="3" spellcheck="false">1.91 1.91</textarea></label>
+<button class="primary-button full" type="submit">Laske rakenne</button>
+</form>
+<div class="result-grid three section-gap"><div><span>IMPLIED SUM</span><strong id="oddsImpliedSum">—</strong></div><div><span>QUOTED OVERROUND</span><strong id="oddsOverround">—</strong></div><div><span>PAYOUT PROXY</span><strong id="oddsPayoutProxy">—</strong></div></div>
+<div class="odds-normalized-list" id="oddsNormalizedList"></div>
+<p class="microcopy">Normalisointi poistaa tarjottujen kertoimien summamarginaalin mekaanisesti. Se ei tee kertoimista todellista todennäköisyysmallia.</p>
+</article>
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">ACCUMULATOR <i class="evidence-badge calculated">CALCULATED</i></p><h2>Kaikkien pitää osua.</h2></div></div>
+<form class="form-grid" id="accaForm">
+<label><span>Yhden jalan osumatodennäköisyys %</span><input id="accaLegProb" max="99.9" min="0.1" step="0.1" type="number" value="60"/></label>
+<label><span>Jalkoja</span><input id="accaLegs" max="30" min="1" step="1" type="number" value="6"/></label>
+<button class="primary-button full" type="submit">Laske yhdistelmä</button>
+</form>
+<div class="result-grid three section-gap"><div><span>KAIKKI OSUVAT</span><strong id="accaJoint">—</strong></div><div><span>≥1 MENEE OHI</span><strong id="accaMiss">—</strong></div><div><span>REILU YHTEISKERROIN</span><strong id="accaFairOdds">—</strong></div></div>
+<div class="epistemic-brake"><b>Raja:</b> tämä demo olettaa jalkojen riippumattomuuden. Oikeat kohteet voivat olla korreloituneita.</div>
+</article>
+</div>
+<div class="odds-grid section-gap">
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">LOTTERY / JACKPOT <i class="evidence-badge calculated">CALCULATED</i></p><h2>Jättipotti ja sen todennäköisyys samaan ruutuun.</h2></div></div>
+<form class="form-grid" id="lotteryForm">
+<label><span>Lipun hinta €</span><input id="lotteryPrice" min="0" step="0.1" type="number" value="2"/></label>
+<label><span>Mahdollisia yhdistelmiä</span><input id="lotteryCombos" min="1" step="1" type="number" value="139838160"/></label>
+<label><span>Jackpot €</span><input id="lotteryJackpot" min="0" step="1000" type="number" value="10000000"/></label>
+<label><span>Muiden voittojen EV / lippu €</span><input id="lotteryOtherEv" min="0" step="0.01" type="number" value="0"/></label>
+<button class="primary-button full" type="submit">Laske jackpot-rakenne</button>
+</form>
+<div class="result-grid four section-gap"><div><span>PÄÄVOITTO</span><strong id="lotteryProb">—</strong></div><div><span>JACKPOT EV</span><strong id="lotteryJackpotEv">—</strong></div><div><span>NETTO EV</span><strong id="lotteryNetEv">—</strong></div><div><span>RETURN</span><strong id="lotteryReturn">—</strong></div></div>
+</article>
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">RACING / PARI-MUTUEL <i class="evidence-badge calculated">CALCULATED</i></p><h2>Pooli ennen tarinaa.</h2></div></div>
+<form class="form-grid" id="racingForm">
+<label><span>Kokonaispooli €</span><input id="racingPool" min="0" step="100" type="number" value="100000"/></label>
+<label><span>Takeout %</span><input id="racingTakeout" max="99" min="0" step="0.1" type="number" value="20"/></label>
+<label><span>Voittavan valinnan osuus poolista %</span><input id="racingWinnerShare" max="100" min="0.01" step="0.1" type="number" value="25"/></label>
+<label><span>Esimerkkipanos €</span><input id="racingStake" min="0" step="1" type="number" value="10"/></label>
+<button class="primary-button full" type="submit">Laske pooli</button>
+</form>
+<div class="result-grid four section-gap"><div><span>TAKEOUT</span><strong id="racingTakeoutAmount">—</strong></div><div><span>NETTOPOOLI</span><strong id="racingNetPool">—</strong></div><div><span>PAYOUT / €</span><strong id="racingPayout">—</strong></div><div><span>ESIMERKKIPALAUTUS</span><strong id="racingReturn">—</strong></div></div>
+</article>
+</div>
+</section><section aria-labelledby="marketTitle" class="screen" data-screen="market" id="market">
+<div class="section-head"><div><p class="eyebrow">MARKET X-RAY</p><h1 id="marketTitle">Punainen ja vihreä kynttilä ovat menneen hinnan yhteenveto.</h1><p>Riko charttihype random-walk-nullilla, laske kaupankäynnin kitka ja katso mitä vipu tekee omalle pääomalle. Tämä ei anna osto-, myynti- tai markkinaennusteita.</p></div></div>
+<div class="two-col market-top">
+<article class="panel tool-panel candle-chart-wrap">
+<div class="panel-head"><div><p class="eyebrow">CANDLE AUTOPSY <i class="evidence-badge simulated">SIMULATED</i></p><h2>Täysin synteettinen chartti</h2></div></div>
+<form class="form-grid compact-form" id="marketCandleForm">
+<label><span>Kynttilöitä</span><input id="marketSteps" max="1000" min="30" step="10" type="number" value="240"/></label>
+<label><span>Volatiliteetti % / askel</span><input id="marketVol" max="20" min="0.01" step="0.1" type="number" value="1"/></label>
+<button class="primary-button full" type="submit">Generoi random walk</button>
+</form>
+<canvas aria-label="Synteettinen kynttiläkaavio" height="520" id="marketCandleChart" width="1200"></canvas>
+<div class="result-grid four section-gap"><div><span>TOTAL RETURN</span><strong id="marketTotalReturn">—</strong></div><div><span>MAX DRAWDOWN</span><strong id="marketDrawdown">—</strong></div><div><span>GREEN RATE</span><strong id="marketGreenRate">—</strong></div><div><span>LONGEST GREEN RUN</span><strong id="marketGreenRun">—</strong></div></div>
+<div class="strip-result" id="marketCandleReadout">Generoi sarja nähdäksesi kuinka uskottavan näköisiä kuvioita satunnaispolku tuottaa.</div>
+</article>
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">PATTERN NULL LAB <i class="evidence-badge simulated">SIMULATED</i></p><h2>Kolme vihreää. Entä seuraava?</h2></div></div>
+<p>250 synteettistä polkua testaa yksinkertaista kynttiläsääntöä satunnaismallia vasten. Tarkoitus on näyttää null-baseline, ei todistaa kaikkia teknisen analyysin menetelmiä vääriksi.</p>
+<button class="primary-button wide" id="marketNullRun" type="button">Aja random-walk-null</button>
+<div class="result-grid four section-gap"><div><span>BASELINE GREEN</span><strong id="marketNullBase">—</strong></div><div><span>AFTER 3 GREEN</span><strong id="marketNullAfter">—</strong></div><div><span>DIFFERENCE</span><strong id="marketNullDiff">—</strong></div><div><span>TEST EVENTS</span><strong id="marketNullN">—</strong></div></div>
+<div class="epistemic-brake"><b>Kylmä kysymys:</b> löytyykö sääntö ennen dataa määriteltynä, kulujen jälkeen ja uudessa aineistossa, vai näyttääkö se hyvältä vasta chartin nähtyäsi?</div>
+</article>
+</div>
+<div class="odds-grid section-gap">
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">COST DRAG <i class="evidence-badge calculated">CALCULATED</i></p><h2>Treidi ei tapahdu tyhjiössä.</h2></div></div>
+<form class="form-grid" id="marketCostForm">
+<label><span>Pääoma €</span><input id="marketCapital" min="0" step="100" type="number" value="10000"/></label>
+<label><span>Treidejä / päivä</span><input id="marketTradesDay" min="0" step="1" type="number" value="5"/></label>
+<label><span>Päiviä</span><input id="marketDays" min="1" step="1" type="number" value="20"/></label>
+<label><span>Turnover / treidi % pääomasta</span><input id="marketTurnover" min="0" step="1" type="number" value="100"/></label>
+<label><span>Spread bps</span><input id="marketSpread" min="0" step="0.1" type="number" value="4"/></label>
+<label><span>Fees bps</span><input id="marketFees" min="0" step="0.1" type="number" value="3"/></label>
+<label><span>Slippage bps</span><input id="marketSlippage" min="0" step="0.1" type="number" value="3"/></label>
+<button class="primary-button full" type="submit">Laske kitka</button>
+</form>
+<div class="result-grid three section-gap"><div><span>TOTAL NOTIONAL</span><strong id="marketNotional">—</strong></div><div><span>COST DRAG</span><strong id="marketCostDrag">—</strong></div><div><span>% CAPITAL</span><strong id="marketCostPct">—</strong></div></div>
+</article>
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">LEVERAGE X-RAY <i class="evidence-badge calculated">CALCULATED</i></p><h2>Vipu suurentaa myös väärän suunnan.</h2></div></div>
+<form class="form-grid" id="marketLeverageForm">
+<label><span>Oma pääoma €</span><input id="marketLevCapital" min="0" step="100" type="number" value="1000"/></label>
+<label><span>Vipu ×</span><input id="marketLeverage" max="200" min="1" step="1" type="number" value="10"/></label>
+<label class="full"><span>Vastaliike %</span><input id="marketAdverseMove" max="100" min="0" step="0.1" type="number" value="5"/></label>
+<button class="primary-button full" type="submit">Laske herkkyys</button>
+</form>
+<div class="result-grid four section-gap"><div><span>NOTIONAL</span><strong id="marketNotionalLev">—</strong></div><div><span>P/L</span><strong id="marketLevPnl">—</strong></div><div><span>EQUITY AFTER</span><strong id="marketLevEquity">—</strong></div><div><span>~WIPE MOVE</span><strong id="marketWipeMove">—</strong></div></div>
+<p class="microcopy">Yksinkertainen herkkyyslasku. Ei huomioi maintenance marginia, likvidaatiomallia, fundingia tai gap-riskiä.</p>
+</article>
+</div>
+<article class="panel tool-panel section-gap market-hype-card">
+<div class="panel-head"><div><p class="eyebrow">TRADING HYPE AUTOPSY <i class="evidence-badge heuristic">HEURISTIC</i></p><h2>Riisu “selvä breakout” väitteeksi, ei ennusteeksi.</h2></div></div>
+<form class="two-col xray-input-grid" id="marketHypeForm"><label><span>Treidaus- tai sijoitushype</span><textarea id="marketHypeText" placeholder="Esim. 20x leverage, tämä breakout on varma, VIP-signaalit…" rows="8"></textarea></label><div><button class="primary-button wide" type="submit">Aja hype-X-Ray</button><p class="microcopy">Heuristiikka etsii rakennetta ja tarkistuskohtia. Se ei tiedä tulevaa markkinahintaa.</p></div></form>
+<div class="pattern-list section-gap" id="marketHypeOutput"><p class="empty-state">Ei analyysiä.</p></div>
+</article>
+</section>
+<section aria-labelledby="dependencyTitle" class="screen" data-screen="dependency" id="dependency">
+<div class="section-head"><div><p class="eyebrow">DEPENDENCY LAB</p><h1 id="dependencyTitle">Silmukka ensin. Sitten testataan toistuuko se.</h1><p>Piirrä silmukkahypoteesi ja vertaa sitä Journalin pitkittäisaineistoon. Tulos on kuvaileva, ei diagnoosi tai kausaalipäätelmä.</p></div></div>
+<div class="two-col">
+<article class="panel tool-panel">
+<form class="form-stack" id="loopForm">
+<label><span>Ilmiö</span><select id="loopCategory"><option>Rahapelaaminen</option><option>Doomscrolling / some</option><option>Ostaminen</option><option>Alkoholi</option><option>Nikotiini</option><option>Muu toistuva toiminta</option></select></label>
+<label><span>Triggeri</span><textarea id="loopTrigger" placeholder="Esim. yksinäisyys, tylsyys, palkkapäivä, stressi..." rows="3"></textarea></label>
+<label><span>Urge / impulssi</span><textarea id="loopUrge" placeholder="Miltä veto toimintaan tuntuu juuri ennen toimintaa?" rows="2"></textarea></label>
+<label><span>Toiminta</span><textarea id="loopAction" placeholder="Mitä tapahtuu käytännössä?" rows="3"></textarea></label>
+<label><span>Välitön palkkio</span><textarea id="loopReward" placeholder="Helpotus, jännitys, huomio, katkos ajatuksiin..." rows="3"></textarea></label>
+<label><span>Jälkivaikutus / kustannus</span><textarea id="loopCost" placeholder="Raha, aika, uni, ahdistus, muu myöhempi vaikutus..." rows="3"></textarea></label>
+<button class="primary-button" type="submit">Piirrä hypoteesi</button>
+</form>
+</article>
+<article class="panel xray-panel evidence-layer" data-evidence="user-reported interpretation">
+<div class="panel-head"><div><p class="eyebrow">LOOP HYPOTHESIS <i class="evidence-badge user-reported">USER-REPORTED</i></p><h2>Mekanismi</h2></div><button class="ghost-button compact" id="saveLoop" type="button">Siirrä Journaliin</button></div>
+<div class="loop-map five" id="loopMap">
+<div class="loop-node"><small>1</small><span>TRIGGERI</span><strong>—</strong></div><i>→</i>
+<div class="loop-node"><small>2</small><span>URGE</span><strong>—</strong></div><i>→</i>
+<div class="loop-node"><small>3</small><span>TOIMINTA</span><strong>—</strong></div><i>→</i>
+<div class="loop-node"><small>4</small><span>PALKKIO</span><strong>—</strong></div><i>→</i>
+<div class="loop-node"><small>5</small><span>JÄLKIVAIKUTUS</span><strong>—</strong></div>
+</div>
+<div class="strip-result evidence-layer" data-evidence="interpretation"><span class="evidence-badge interpretation">INTERPRETATION</span> Tämä kartta on hypoteesi omasta silmukasta. Journal-data voi myöhemmin tukea sitä, heikentää sitä tai olla näyttämättä mitään toistuvaa rakennetta.</div>
+</article>
+</div>
+<article aria-labelledby="correlationTitle" class="panel xray-panel dependency-bench section-gap">
+<div class="panel-head"><div><p class="eyebrow">JOURNAL CORRELATION BENCH <i class="evidence-badge calculated">CALCULATED</i></p><h2 id="correlationTitle">Testaa omaa silmukkahypoteesia.</h2></div><div class="button-row"><button class="primary-button compact" id="runDependencyAnalysis" type="button">Aja analyysi</button><a class="ghost-button compact" data-route="journal" href="#journal">Avaa Journal</a></div></div>
+<p class="microcopy">Analyysi avautuu vasta 14 merkinnällä. Alle 30 havaintoa merkitään alustavaksi. Circular-shift null-check siirtää yhden aikasarjan järjestystä syklisesti ja tarkistaa, syntyykö yhtä suuri efekti helposti myös ajallista kohdistusta rikkomalla.</p>
+<div class="result-grid four dependency-summary">
+<div><span>MERKINTÖJÄ</span><strong id="depN">0</strong></div>
+<div><span>TILA</span><strong id="depStatus">KERÄÄ DATAA</strong></div>
+<div><span>TESTEJÄ</span><strong id="depTestCount">0 / 5</strong></div>
+<div><span>HAVAITTAVAA</span><strong id="depDetectable">—</strong></div>
+</div>
+<div aria-live="polite" class="strip-result evidence-layer" data-evidence="calculated interpretation" id="dependencyAnalysisMessage"><span class="evidence-badge calculated">CALCULATED</span> Tarvitset vähintään 14 Journal-merkintää ennen alustavaa analyysiä.</div>
+<div aria-live="polite" class="correlation-grid" id="dependencyTestGrid"></div>
+<details class="method-details"><summary>Mitä tässä testataan?</summary><div class="method-copy"><p><b>Uni ↔ urge:</b> Pearsonin r kuvaa lineaarista yhteyttä.</p><p><b>Trigger-ryhmä ↔ urge:</b> η² kuvaa, kuinka suuri osa havaitusta urge-vaihtelusta liittyy kirjattuihin trigger-ryhmiin tässä aineistossa.</p><p><b>Toiminta ↔ jälkikustannus:</b> point-biserial-korrelaatio vertaa toteutuiko toiminta vai ei.</p><p><b>Välitön palkkio ↔ jälkikustannus:</b> kuvaileva korrelaatio kahden itsearvioidun asteikon välillä.</p><p><b>Viikonpäivä ↔ urge:</b> arkinen baseline-kontrolli muistuttamassa, että kuvioita voi näkyä muuallakin kuin alkuperäisessä hypoteesissa.</p><p>Yksikään näistä ei osoita kausaliteettia.</p></div></details>
+</article>
+</section>
+<section aria-labelledby="impulseTitle" class="screen" data-screen="impulse" id="impulse">
+<div class="section-head"><div><p class="eyebrow">IMPULSE BREAKER</p><h1 id="impulseTitle">Lisää päätöksen ja impulssin väliin tila.</h1><p>Ei lukitse laitetta eikä estä sinua väkisin. Se rakentaa paikallisen viiveen, jonka aikana alkuperäinen aikomus ja vaihtoehto pysyvät näkyvissä.</p></div></div>
+<div class="impulse-grid">
+<article class="panel tool-panel">
+<form class="form-stack" id="impulseForm">
+<label><span>Mitä tekisi mieli tehdä juuri nyt?</span><textarea id="impulseIntent" placeholder="Kirjoita mahdollisimman konkreettisesti." required="" rows="4"></textarea></label>
+<label><span>Mikä vaihtoehto olisi 10 minuuttia myöhemmin edelleen mahdollinen?</span><textarea id="impulseAlternative" placeholder="Kävely, viesti ystävälle, suihku, ruoka, nukkuminen, muu..." rows="4"></textarea></label>
+<label><span>Viive</span><select id="impulseMinutes"><option value="1">1 min testiin</option><option value="5">5 min</option><option selected="" value="10">10 min</option><option value="20">20 min</option></select></label>
+<button class="primary-button" type="submit">Käynnistä viive</button>
+</form>
+</article>
+<article class="panel timer-panel evidence-layer" data-evidence="user-reported">
+<p class="eyebrow">FRICTION TIMER <i class="evidence-badge user-reported">USER-REPORTED</i></p>
+<div class="timer-ring"><span id="timerText">10:00</span></div>
+<h2 id="timerIntent">Ei aktiivista impulssia.</h2>
+<p id="timerAlternative">Kirjoita vasemmalle mitä olet tekemässä ja mikä toinen vaihtoehto on olemassa.</p>
+<div class="timer-actions"><button class="ghost-button" id="cancelTimer" type="button">Keskeytä</button><a class="secondary-button" data-route="calm" href="#calm">Calm Room</a></div>
+</article>
+</div>
+</section>
+<section aria-labelledby="frictionTitle" class="screen" data-screen="friction" id="friction">
+<div class="section-head">
+<div><p class="eyebrow">FRICTION LAB</p><h1 id="frictionTitle">Rakenna kitka ennen päätöstä.</h1><p>Rakenna vapaaehtoinen viive domainille, patternille tai käsin. Selainversio ei valvo taustalla missä käyt.</p></div>
+</div>
+<div class="two-col friction-layout">
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">RULE BUILDER <i class="evidence-badge user-reported">USER-REPORTED</i></p><h2>Uusi kitkasääntö</h2></div><span class="status-dot">LOCAL</span></div>
+<form class="form-stack" id="frictionRuleForm">
+<label><span>Nimi</span><input id="frictionName" maxlength="80" placeholder="Esim. Kasinoilta viive" required="" type="text"/></label>
+<label><span>Laukaisin</span><select id="frictionTriggerType"><option value="domain">Domain</option><option value="pattern">Pattern Library</option><option value="manual">Käsin</option></select></label>
+<label id="frictionTriggerValueWrap"><span id="frictionTriggerValueLabel">Domain</span><input id="frictionTriggerValue" maxlength="160" placeholder="example.com" type="text"/></label>
+<label hidden="" id="frictionPatternWrap"><span>Pattern</span><select id="frictionPattern"></select></label>
+<label><span>Viive</span><select id="frictionDelay"><option value="0">Ei ajastinta</option><option value="1">1 min testiin</option><option value="2">2 min</option><option selected="" value="5">5 min</option><option value="10">10 min</option><option value="20">20 min</option><option value="30">30 min</option></select></label>
+<label><span>Tarkistuskysymys</span><textarea id="frictionPrompt" placeholder="Mitä olet tulossa tekemään ja onko päätös edelleen sama viiveen jälkeen?" rows="3"></textarea></label>
+<div class="friction-options">
+<label class="toggle-row"><span>Näytä Journal-yhteenveto</span><input checked="" id="frictionShowJournal" type="checkbox"/></label>
+<label class="toggle-row"><span>Tarjoa Calm Room</span><input checked="" id="frictionOfferCalm" type="checkbox"/></label>
+<label class="toggle-row"><span>Vaadi tietoinen vahvistus</span><input checked="" id="frictionRequireConfirm" type="checkbox"/></label>
+</div>
+<button class="primary-button" type="submit">Tallenna kitkasääntö</button>
+</form>
+</article>
+<article class="panel xray-panel">
+<div class="panel-head"><div><p class="eyebrow">LOCAL RULESET <i class="evidence-badge measured">MEASURED</i></p><h2>Omat säännöt</h2></div><span class="status-badge cyan" id="frictionRuleCount">0 ACTIVE</span></div>
+<p class="microcopy">Säännöt elävät vain tämän selaimen localStoragessa. Extension käyttää omassa storage-tilassaan erikseen tuotua kopiota.</p>
+<div class="friction-rule-list" id="frictionRuleList"><p class="empty-state">Ei vielä sääntöjä.</p></div>
+<div class="button-row section-gap-sm">
+<button class="ghost-button compact" id="exportFrictionRules" type="button">Vie JSON extensionille</button>
+<label class="file-button compact">Tuo JSON<input accept="application/json,.json" id="importFrictionRules" type="file"/></label>
+</div>
+</article>
+</div>
+<article aria-labelledby="frictionSimulatorTitle" class="panel friction-simulator section-gap">
+<div class="panel-head"><div><p class="eyebrow">FRICTION SIMULATOR <i class="evidence-badge calculated">CALCULATED</i></p><h2 id="frictionSimulatorTitle">Testaa mitä tapahtuisi.</h2></div><button class="primary-button compact" id="runFrictionTest" type="button">Aja kitkatesti</button></div>
+<div class="friction-test-grid">
+<label><span>URL / domain</span><input id="frictionTestUrl" type="text" value="https://example.com"/></label>
+<label><span>Pattern-osuma</span><select id="frictionTestPattern"><option value="">Ei patternia</option></select></label>
+<label class="toggle-row test-manual"><span>Manuaalinen laukaisu</span><input id="frictionTestManual" type="checkbox"/></label>
+</div>
+<div aria-live="polite" class="strip-result evidence-layer" data-evidence="calculated interpretation" id="frictionTestResult"><span class="evidence-badge calculated">CALCULATED</span> Ei testiä vielä.</div>
+</article>
+<article aria-labelledby="frictionSessionTitle" class="panel friction-session section-gap" hidden="" id="frictionSession">
+<div class="friction-session-head"><div><p class="eyebrow">ACTIVE FRICTION SESSION</p><h2 id="frictionSessionTitle">Päätös on edelleen sinun.</h2></div><div class="friction-clock" id="frictionClock">00:00</div></div>
+<div class="pattern-domain-tags" id="frictionMatchedRules"></div>
+<div class="friction-prompts" id="frictionPrompts"></div>
+<div class="friction-journal evidence-layer" data-evidence="user-reported calculated" hidden="" id="frictionJournalSnapshot"></div>
+<div class="friction-before-grid"><label><span>Urge ennen päätöstä 0–10</span><input id="frictionUrgeBefore" max="10" min="0" placeholder="—" step="1" type="number"/></label><p class="microcopy">Valinnainen. Jos kirjaat sen, Outcome Lab voi verrata urgea kitkan jälkeen.</p></div>
+<label class="friction-reflection"><span>Mitä huomaat nyt?</span><textarea id="frictionReflection" placeholder="Tätä ei analysoida eikä lähetetä mihinkään." rows="4"></textarea></label>
+<label class="confirm-row" id="frictionConfirmWrap"><input id="frictionConfirm" type="checkbox"/><span>Olen pysähtynyt ja teen seuraavan päätöksen tietoisesti.</span></label>
+<div class="button-row">
+<button class="primary-button" disabled="" id="frictionContinue" type="button">Jatka päätökseen</button>
+<a class="secondary-button" data-route="calm" href="#calm" id="frictionCalmLink">Calm Room</a>
+<button class="ghost-button" id="frictionEnd" type="button">Lopeta testi</button>
+</div>
+<p class="microcopy">Kitka ei ratkaise puolestasi. Se lisää aikaa ja näkyvyyttä päätöksen ympärille.</p>
+</article>
+<article class="panel section-gap">
+<div class="panel-head"><div><p class="eyebrow">EXTENSION BRIDGE</p><h2>Opt-in myös selaimessa.</h2></div><span class="status-badge gold">ACTIVE TAB ONLY</span></div>
+<p>Vie säännöt JSONina ja tuo ne X-Ray Intercept -laajennuksen popupissa. Kun käynnistät sivulla X-Ray-skannauksen, extension tarkistaa nykyisen domainin ja havaitut patternit sääntöjä vasten. Se ei tee tätä taustalla ilman käyttäjän painallusta.</p>
+<div class="strip-result"><b>Privacy boundary:</b> automaattinen “kun avaan domainin” -valvonta vaatisi laajemman selainluvan. Tämä selainversio ei ota sitä salaa.</div>
+</article>
+</section>
+<section aria-labelledby="universalTitle" class="screen" data-screen="universal" id="universal">
+<div class="section-head">
+<div>
+<p class="eyebrow">UNIVERSAL X-RAY BENCH</p>
+<h1 id="universalTitle">Syötä teksti. Riisu väiteketju näkyviin.</h1>
+<p>Pilkkoo tekstin väitteisiin, tukeen, oletuksiin, kehystykseen, kannustimiin ja tarkistuskohtiin. Ei ulkoista faktantarkistusta eikä intentin arvaamista.</p>
+</div>
+</div>
+<div class="two-col universal-layout bench-top-grid">
+<article class="panel tool-panel">
+<form class="form-stack" id="xrayForm">
+<label><span>Linssi</span><select id="xrayLens"><option value="general">Yleinen X-Ray</option><option value="news">Uutinen / politiikka</option><option value="guru">Guru / self-help</option><option value="shopping">Verkkokauppa / dark patterns</option><option value="work">Työelämä / pöhinäjargon</option><option value="relationship">Viestittely / ihmissuhde</option><option value="ai">AI / auktoriteettipuhe</option><option value="health">Terveys / biohacking</option><option value="dating">Deitti-app / pyyhkäisy</option><option value="productivity">Tuottavuus / metatyö</option><option value="investing">Sijoitus / hype</option></select></label>
+<label><span>Analysoitava teksti</span><textarea id="xrayText" placeholder="Liitä tähän teksti. Mitään ei lähetetä verkkoon." rows="18"></textarea></label>
+<div class="button-row">
+<button class="primary-button" type="submit">Poista iho</button>
+<button class="ghost-button" id="clearXray" type="button">Tyhjennä</button>
+</div>
+<p class="microcopy">Bench tunnistaa tekstin sisäisiä rakenteita. Se ei voi offline-tilassa tietää, onko ulkoinen väite tosi, onko lähde laadukas tai mikä kirjoittajan todellinen motiivi on.</p>
+</form>
+</article>
+<article class="panel xray-panel">
+<div class="panel-head">
+<div><p class="eyebrow">BENCH OVERVIEW <i class="evidence-badge heuristic">HEURISTIC</i></p><h2>Röntgen-tulos</h2></div>
+<span aria-label="Heuristinen painekuormitusindeksi" class="score-orb evidence-layer" data-evidence="heuristic" id="xrayScore">0</span>
+</div>
+<div class="xray-structure evidence-layer" data-evidence="measured">
+<div><span>Väitelauseita</span><strong id="claimCount">—</strong></div>
+<div><span>Tukiankkureita</span><strong id="supportCount">—</strong></div>
+<div><span>Logiikkasiltoja</span><strong id="bridgeCount">—</strong></div>
+<div><span>Epävarmuuksia</span><strong id="uncertaintyCount">—</strong></div>
+</div>
+<div class="bench-mini-grid section-gap-sm">
+<div><span>Lauseita</span><strong id="sentenceCount">—</strong></div>
+<div><span>Kysymyksiä</span><strong id="questionCount">—</strong></div>
+<div><span>Absoluuttikieltä</span><strong id="absoluteCount">—</strong></div>
+<div><span>Painehavaintoja</span><strong id="pressureCount">—</strong></div>
+</div>
+<div aria-live="polite" class="pattern-list compact-patterns evidence-layer" data-evidence="heuristic" id="xrayPatterns"><p class="empty-state">Syötä teksti ja aja skannaus.</p></div>
+<div class="strip-result evidence-layer" data-evidence="interpretation" id="xraySummary"><span class="evidence-badge interpretation">INTERPRETATION</span> Heuristiikka ei ole totuusautomaatti. Se tekee tekstin rakenteita näkyviksi, jotta niitä voi arvioida erikseen.</div>
+</article>
+</div>
+<article aria-labelledby="skinBenchTitle" class="panel skin-bench section-gap">
+<div class="panel-head">
+<div><p class="eyebrow">SIDE-BY-SIDE SKIN MODE</p><h2 id="skinBenchTitle">Iho päällä / iho pois.</h2></div>
+<div class="button-row"><button class="ghost-button compact" disabled="" id="copySkinOff" type="button">Kopioi riisuttu rakenne</button><button class="ghost-button compact" disabled="" id="exportXrayAnalysis" type="button">Vie JSON</button></div>
+</div>
+<div class="skin-columns">
+<section aria-labelledby="skinOriginalTitle" class="skin-column">
+<div class="skin-column-head"><span class="skin-indicator on"></span><h3 id="skinOriginalTitle">ALKUPERÄINEN</h3></div>
+<div aria-live="polite" class="skin-copy source-copy" id="skinOriginal">Ei analyysiä vielä.</div>
+</section>
+<section aria-labelledby="skinStrippedTitle" class="skin-column stripped">
+<div class="skin-column-head"><span class="skin-indicator off"></span><h3 id="skinStrippedTitle">RIISUTTU RAKENNE</h3></div>
+<pre aria-live="polite" class="skin-copy stripped-copy evidence-layer" data-evidence="heuristic interpretation" id="skinStripped">Ei analyysiä vielä.</pre>
+</section>
+</div>
+</article>
+<div aria-label="Universal X-Ray -rakenneluokat" class="bench-decomposition section-gap">
+<article class="panel decomposition-card evidence-layer" data-evidence="heuristic"><div class="decomp-head"><span>01</span><h2>Väitteet</h2><i class="evidence-badge heuristic">HEURISTIC</i></div><div class="decomp-list" id="claimList"><p class="empty-state">Ei analyysiä.</p></div></article>
+<article class="panel decomposition-card evidence-layer" data-evidence="heuristic"><div class="decomp-head"><span>02</span><h2>Näkyvä tuki</h2><i class="evidence-badge heuristic">HEURISTIC</i></div><div class="decomp-list" id="supportList"><p class="empty-state">Ei analyysiä.</p></div></article>
+<article class="panel decomposition-card evidence-layer" data-evidence="heuristic"><div class="decomp-head"><span>03</span><h2>Oletukset / logiikkasillat</h2><i class="evidence-badge heuristic">HEURISTIC</i></div><div class="decomp-list" id="assumptionList"><p class="empty-state">Ei analyysiä.</p></div></article>
+<article class="panel decomposition-card evidence-layer" data-evidence="heuristic"><div class="decomp-head"><span>04</span><h2>Kehystys / tunnekoukut</h2><i class="evidence-badge heuristic">HEURISTIC</i></div><div class="decomp-list" id="frameList"><p class="empty-state">Ei analyysiä.</p></div></article>
+<article class="panel decomposition-card evidence-layer" data-evidence="heuristic"><div class="decomp-head"><span>05</span><h2>Kannustin / pyydetty toiminta</h2><i class="evidence-badge heuristic">HEURISTIC</i></div><div class="decomp-list" id="incentiveList"><p class="empty-state">Ei analyysiä.</p></div></article>
+<article class="panel decomposition-card evidence-layer" data-evidence="interpretation"><div class="decomp-head"><span>06</span><h2>Mitä ei tiedetä</h2><i class="evidence-badge interpretation">INTERPRETATION</i></div><div class="decomp-list" id="uncertaintyList"><p class="empty-state">Ei analyysiä.</p></div></article>
+<article class="panel decomposition-card evidence-layer" data-evidence="interpretation"><div class="decomp-head"><span>07</span><h2>Vastatesti</h2><i class="evidence-badge interpretation">INTERPRETATION</i></div><div class="decomp-list" id="countercaseList"><p class="empty-state">Ei analyysiä.</p></div></article>
+</div>
+<article aria-labelledby="claimGraphTitle" class="panel claim-graph-panel section-gap evidence-layer" data-evidence="heuristic interpretation">
+<div class="panel-head"><div><p class="eyebrow">CLAIM GRAPH</p><h2 id="claimGraphTitle">Mihin johtopäätös nojaa?</h2></div><span class="status-badge gold">MAX 10 CLAIMS</span></div>
+<p class="microcopy">Vasen puoli näyttää tekstissä näkyvän tuen tai logiikkasillan, keskellä on väitelause ja oikealla siihen osuva kehystys tai tarkistettava epävarmuus. Nuoli ei tarkoita, että tuki olisi riittävä.</p>
+<div aria-live="polite" class="claim-graph" id="claimGraph" role="list"><p class="empty-state">Aja analyysi nähdäksesi väiteketjun.</p></div>
+</article>
+</section>
+<section aria-labelledby="interceptTitle" class="screen" data-screen="intercept" id="intercept">
+<div class="section-head"><div><p class="eyebrow">X-RAY INTERCEPT</p><h1 id="interceptTitle">Toimijuuden DevTools selaimeen.</h1><p>Käyttäjän käynnistämä selainlaajennus analysoi vain aktiivisen välilehden activeTab-pääsyn aikana.</p></div></div>
+<div class="two-col">
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">PERMISSION SURFACE <i class="evidence-badge measured">MEASURED</i></p><h2>Ei pysyvää &lt;all_urls&gt;-lupaa.</h2></div></div>
+<div class="intercept-permissions">
+<div><span>HOST ACCESS</span><strong>activeTab</strong><small>väliaikainen · käyttäjän eleestä</small></div>
+<div><span>INJECTION</span><strong>scripting</strong><small>paketoidut paikalliset skriptit</small></div>
+<div><span>STORAGE</span><strong>local</strong><small>vain extension-asetus / viime linssi</small></div>
+<div><span>PERSISTENT HOSTS</span><strong>0</strong><small>ei host_permissions-listaa</small></div>
+</div>
+<details class="method-details"><summary>Mitä sivulla tapahtuu?</summary><div class="method-copy"><p>1. Näkyvä sivuteksti kerätään aktiiviselta välilehdeltä.</p><p>2. Sama <code>pattern-library.js</code> ja <code>universal-core.js</code> analysoivat tekstin lokaalisti.</p><p>3. Overlay merkitsee tekstikuvioita HEURISTIC-tunnisteilla ja DOM-signaaleja, kuten valmiiksi valitun kontrollin, MEASURED-tunnisteilla.</p><p>4. Sulkeminen poistaa paneelin ja merkinnät. Laajennus ei jatka seuraavan sivun analysointia automaattisesti.</p></div></details>
+</article>
+<article class="panel xray-panel">
+<div class="panel-head"><div><p class="eyebrow">INSTALL / LOAD UNPACKED</p><h2>Extension sisältyy release-kansioon.</h2></div><span class="status-badge gold">extension/</span></div>
+<a class="primary-button wide" download="" href="BHC_XRAY_INTERCEPT_EXTENSION_2.0.0.zip">Lataa WebExtension ZIP</a><ol class="install-steps"><li>Pura ladattu ZIP omaksi kansiokseen.</li><li>Avaa selaimen extension-kehittäjätila.</li><li>Valitse <b>Load unpacked / Lataa pakkaamaton lisäosa</b>.</li><li>Valitse tämän releasen <code>extension/</code>-kansio.</li><li>Kiinnitä BHC X-Ray Intercept työkalupalkkiin.</li><li>Paina ikonia vain sivulla, jonka haluat analysoida.</li></ol>
+<div class="epistemic-brake"><b>Rajoitus:</b> selain estää injektion omilla suojatuilla sivuillaan. Overlay tunnistaa kuvioita, ei kirjoittajan intentiota eikä väitteiden totuutta.</div>
+</article>
+</div>
+</section>
+<section aria-labelledby="patternsTitle" class="screen" data-screen="patterns" id="patterns">
+<div class="section-head"><div><p class="eyebrow">PATTERN ATLAS</p><h1 id="patternsTitle">Sama mekanismi, eri naamio.</h1><p>Mekanismit, niiden rakenteelliset yhteydet, havaittavuuden rajat ja vapaaehtoiset kitkaideat. Kartan viiva ei tarkoita kausaalisuutta.</p></div></div>
+<article class="panel pattern-toolbar">
+<label><span>Hae</span><input id="patternSearch" placeholder="scarcity, sijoitus, social proof..." type="search"/></label>
+<label><span>Perhe</span><select id="patternFamily"><option value="">Kaikki perheet</option></select></label>
+<div class="pattern-stats" id="patternStats">Registry latautuu…</div>
+</article>
+<div class="pattern-atlas-workbench section-gap">
+<article class="panel atlas-map-panel">
+<div class="panel-head"><div><p class="eyebrow">MECHANISM MAP <i class="evidence-badge calculated">CALCULATED</i></p><h2>Patternien väliset rakenteelliset yhteydet</h2></div><span class="status-badge cyan" id="atlasEdgeCount">0 LINKS</span></div>
+<canvas aria-label="Pattern Atlas -mekanismikartta" height="560" id="patternAtlasCanvas" width="1100"></canvas>
+<p class="microcopy">Viiva = yhteinen family/domain tai passportissa ilmoitettu related-linkki. Ei vaikutussuuntaa eikä kausaalipäätelmää.</p>
+</article>
+<aside aria-live="polite" class="panel atlas-detail" id="patternDetail">
+<p class="eyebrow">PATTERN PASSPORT</p><h2>Valitse mekanismi</h2><p>Klikkaa kartan solmua tai passport-korttia.</p>
+</aside>
+</div>
+<div aria-live="polite" class="pattern-atlas-grid" id="patternAtlasGrid"></div>
+</section>
+<section aria-labelledby="outcomesTitle" class="screen" data-screen="outcomes" id="outcomes">
+<div class="section-head"><div><p class="eyebrow">OUTCOME LAB</p><h1 id="outcomesTitle">Kitka ei ole onnistuminen ennen kuin katsotaan mitä tapahtui.</h1><p>Kirjaa mitä kitkasession jälkeen tapahtui ja vertaile omaa outcome-dataa kuvailevasti. Muutos ei todista kitkan aiheuttaneen sitä.</p></div></div>
+<div class="two-col outcome-layout">
+<article class="panel tool-panel">
+<div class="strip-result" id="pendingOutcomeContext"><b>Ei odottavaa kitkasessiota.</b> Voit kirjata outcome-havainnon myös käsin.</div>
+<form class="form-grid section-gap" id="outcomeForm">
+<label><span>Urge ennen 0–10</span><input id="outcomeUrgeBefore" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+<label><span>Urge jälkeen 0–10</span><input id="outcomeUrgeAfter" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+<label><span>Päätös</span><select id="outcomeDecision"><option value="unknown">Ei kirjattu</option><option value="continued">Jatkoin alkuperäistä toimintaa</option><option value="stopped">Jätin tekemättä</option><option value="deferred">Siirsin päätöstä myöhemmäksi</option><option value="changed">Valitsin vaihtoehtoisen toiminnan</option></select></label>
+<label><span>Jälkikustannus 0–10</span><input id="outcomeAfterCost" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+<label class="full"><span>Muistiinpano</span><textarea id="outcomeNote" placeholder="Mitä tapahtui kitkan ja päätöksen jälkeen?" rows="4"></textarea></label>
+<button class="primary-button full" type="submit">Tallenna outcome</button>
+</form>
+<p class="microcopy">Urge-muutos = jälkeen − ennen. Negatiivinen luku tarkoittaa pienempää itse raportoitua urgea, ei hoitovaikutusta.</p>
+</article>
+<article class="panel xray-panel">
+<div class="panel-head"><div><p class="eyebrow">OUTCOME SUMMARY <i class="evidence-badge calculated">CALCULATED</i></p><h2 id="outcomeSummaryTitle">0 outcomea</h2></div><div class="button-row"><button class="ghost-button compact" id="exportOutcomes" type="button">Vie JSON</button><label class="file-button compact">Tuo JSON<input accept="application/json,.json" id="importOutcomes" type="file"/></label></div></div>
+<div class="journal-threshold" id="outcomeThreshold"><b>Outcome Lab:</b> 8 havaintoa alustavaan yhteenvetoon · 20 kuvailevampaan aineistoon.</div>
+<div class="strip-result evidence-layer" data-evidence="calculated interpretation" id="outcomeMessage"><span class="evidence-badge calculated">CALCULATED</span> Ei vielä analyysia.</div>
+<div class="outcome-metrics">
+<div><span>N</span><strong id="outcomeN">0</strong></div>
+<div><span>MEDIAANI Δ URGE</span><strong id="outcomeDelta">—</strong></div>
+<div><span>JATKOI</span><strong id="outcomeContinueRate">—</strong></div>
+<div><span>MUUTTI / PYSÄHTYI</span><strong id="outcomeNonContinueRate">—</strong></div>
+</div>
+</article>
+</div>
+<div class="outcome-analysis-grid section-gap">
+<article class="panel"><div class="panel-head"><div><p class="eyebrow">DELAY COHORTS</p><h2>Viivepituudet</h2></div></div><div class="outcome-groups" id="outcomeDelayGroups"><p class="empty-state">Ei dataa.</p></div></article>
+<article class="panel"><div class="panel-head"><div><p class="eyebrow">RULE COHORTS</p><h2>Kitkasäännöt</h2></div></div><div class="outcome-groups" id="outcomeRuleGroups"><p class="empty-state">Ei dataa.</p></div></article>
+<article class="panel"><div class="panel-head"><div><p class="eyebrow">PATTERN COHORTS</p><h2>Mekanismit</h2></div></div><div class="outcome-groups" id="outcomePatternGroups"><p class="empty-state">Ei dataa.</p></div></article>
+</div>
+<article class="panel section-gap"><div class="panel-head"><div><p class="eyebrow">OUTCOME LOG <i class="evidence-badge user-reported">USER-REPORTED</i></p><h2>Paikallinen havaintoloki</h2></div><button class="danger-button compact" id="clearOutcomes" type="button">Poista kaikki</button></div><div class="journal-list" id="outcomeList"><p class="empty-state">Ei outcome-havaintoja.</p></div></article>
+</section>
+<section aria-labelledby="journalTitle" class="screen" data-screen="journal" id="journal">
+<div class="section-head"><div><p class="eyebrow">JOURNAL</p><h1 id="journalTitle">Kerää havainto ennen selitystä.</h1><p>Tallenna triggeri, urge, toiminta, välitön palkkio ja jälkivaikutus erillisinä havaintoina.</p></div></div>
+<div class="two-col journal-layout">
+<article class="panel tool-panel">
+<form class="form-grid" id="journalForm">
+<label><span>Päivä</span><input id="journalDate" required="" type="date"/></label>
+<label><span>Ilmiö</span><select id="journalCategory"><option value="">Ei luokitusta</option><option>Rahapelaaminen</option><option>Doomscrolling / some</option><option>Ostaminen</option><option>Alkoholi</option><option>Nikotiini</option><option>Muu toistuva toiminta</option></select></label>
+<label><span>Urge / impulssi 0–10</span><input id="journalUrge" max="10" min="0" required="" type="number" value="0"/></label>
+<label><span>Mieliala 0–10</span><input id="journalMood" max="10" min="0" required="" type="number" value="5"/></label>
+<label><span>Uni (h)</span><input id="journalSleep" max="24" min="0" step="0.25" type="number" value="7.5"/></label>
+<label><span>Trigger-ryhmä</span><select id="journalTriggerGroup"><option value="">Ei ryhmää</option><option>Stressi</option><option>Yksinolo</option><option>Tylsyys</option><option>Väsymys</option><option>Raha / palkkapäivä</option><option>Altistus / vihje</option><option>Sosiaalinen tilanne</option><option>Konflikti</option><option>Muu</option></select></label>
+<label class="full"><span>Trigger / tapahtuma</span><input id="journalTrigger" placeholder="Mitä tapahtui ennen impulssia?" type="text"/></label>
+<label><span>Toteutuiko toiminta?</span><select id="journalActed"><option value="">Ei kirjattu</option><option value="yes">Kyllä</option><option value="no">Ei</option></select></label>
+<label><span>Välitön palkkio 0–10</span><input id="journalRewardScore" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+<label class="full"><span>Toiminta</span><input id="journalAction" placeholder="Mitä teit tai jätit tekemättä?" type="text"/></label>
+<label class="full"><span>Välitön palkkio / helpotus</span><input id="journalReward" placeholder="Mitä sait heti?" type="text"/></label>
+<label><span>Jälkikustannus 0–10</span><input id="journalAfterCost" max="10" min="0" placeholder="—" step="1" type="number"/></label>
+<label class="full"><span>Jälkivaikutus</span><input id="journalAfterEffect" placeholder="Mitä seurasi myöhemmin?" type="text"/></label>
+<label class="full"><span>Muistiinpano</span><textarea id="journalNote" placeholder="Vapaa teksti" rows="4"></textarea></label>
+<button class="primary-button full" type="submit">Tallenna havainto</button>
+</form>
+</article>
+<article class="panel xray-panel evidence-layer" data-evidence="user-reported">
+<div class="panel-head"><div><p class="eyebrow">YOUR DATA <i class="evidence-badge user-reported">USER-REPORTED</i></p><h2 id="journalSummaryTitle">0 merkintää</h2></div><div class="button-row"><button class="ghost-button compact" id="exportJournal" type="button">Vie JSON</button><button class="danger-button compact" id="clearJournal" type="button">Poista kaikki</button></div></div>
+<div class="journal-threshold" id="journalThreshold"><b>Correlation Bench:</b> 14 merkintää alustavaan analyysiin · 30 kuvailevampaan aineistoon.</div>
+<div class="chart-wrap small"><canvas aria-label="Journalin urge- ja mielialasarja" height="300" id="journalChart" width="900"></canvas></div>
+<div class="journal-list" id="journalList"><p class="empty-state">Ei vielä merkintöjä.</p></div>
+</article>
+</div>
+</section>
+<section aria-labelledby="calmTitle" class="screen" data-screen="calm" id="calm">
+<div class="calm-shell panel">
+<canvas aria-hidden="true" id="calmCanvas"></canvas>
+<div class="calm-content">
+<p class="eyebrow">CALM ROOM</p>
+<h1 id="calmTitle">Ei palkintoa. Ei pisteitä. Ei feediä.</h1>
+<p>Pelkkä hidas visuaalinen tila. Jos haluat, seuraa ympyrää hengityksen tahdissa. Tämä ei ole hoito eikä korvaa ammattilaisen apua.</p>
+<div class="breath-orb" id="breathOrb"><span id="breathText">Sisään</span></div>
+<div class="button-row centered"><button class="ghost-button" id="toggleCalm" type="button">Pysäytä liike</button><a class="secondary-button" data-route="home" href="#home">Takaisin</a></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="vaultTitle" class="screen" data-screen="vault" id="vault">
+<div class="section-head"><div><p class="eyebrow">SYSTEM VAULT</p><h1 id="vaultTitle">Koko paikallinen tila. Yksi tiedosto.</h1><p>Vie tunnettu BHC X-Ray -käyttäjätila yhteen .bhcxray-varmuuskopioon ja palauta se validoidusti.</p></div></div>
+<div class="vault-grid">
+<article class="panel tool-panel vault-primary">
+<div class="panel-head"><div><p class="eyebrow">SYSTEM BACKUP</p><h2>Vie ja palauta</h2></div><span class="status-dot" id="vaultHealth">READY</span></div>
+<div aria-label="Varmuuskopion sisältö" class="vault-metrics">
+<div><span>JOURNAL</span><strong id="vaultJournalCount">0</strong></div>
+<div><span>FRICTION</span><strong id="vaultFrictionCount">0</strong></div>
+<div><span>OUTCOMES</span><strong id="vaultOutcomeCount">0</strong></div>
+<div><span>LOOPS</span><strong id="vaultLoopCount">0</strong></div>
+</div>
+<p class="microcopy">PWA ei voi lukea WebExtensionin omaa storage-aluetta. Varmuuskopio sisältää kuitenkin PWA:ssa olevat siirrettävät Friction Rules -säännöt extension-bridge-osassa.</p>
+<div class="button-row vault-actions">
+<button class="primary-button" id="exportSystemVault" type="button">Vie .bhcxray</button>
+<label class="file-button vault-import">Palauta .bhcxray<input accept="application/json,.json,.bhcxray" id="importSystemVault" type="file"/></label>
+</div>
+<div aria-live="polite" class="vault-status" id="vaultRestoreStatus">Ei palautuksia tässä istunnossa.</div>
+</article>
+<article class="panel tool-panel">
+<div class="panel-head"><div><p class="eyebrow">DATA LIFECYCLE</p><h2>Poista paikallinen käyttäjädata</h2></div></div>
+<p>Poistaa vain tämän sovelluksen tunnetut <code>bhc_xray_*</code>-avaimet: Journalin, Outcome Labin, Friction Rules -säännöt, silmukat, asetukset, X-Ray Lens -tilan ja paikalliset mittarit. Service Worker -välimuisti jää paikalleen, jotta sovellus voi edelleen käynnistyä offline.</p>
+<div class="epistemic-brake"><b>Raja:</b> tämä ei poista WebExtensionin erillistä storagea. Sen säännöt tyhjennetään extensionin omasta popupista.</div>
+<button class="danger-button wide" id="clearAllData" type="button">Poista kaikki paikallinen käyttäjädata</button>
+</article>
+</div>
+<article class="panel section-gap vault-manifest">
+<div class="panel-head"><div><p class="eyebrow">BACKUP MANIFEST</p><h2>Mitä tiedostoon menee?</h2></div><button class="ghost-button compact" id="runVaultSelfTest" type="button">Vault self-test</button></div>
+<div class="vault-key-grid" id="vaultKeyGrid"></div>
+</article>
+</section>
+<section aria-labelledby="settingsTitle" class="screen" data-screen="settings" id="settings">
+<div class="section-head"><div><p class="eyebrow">SETTINGS</p><h1 id="settingsTitle">Paikallisen koneen asetukset.</h1></div></div>
+<div class="two-col">
+<article class="panel tool-panel">
+<h2>Käyttöliittymä</h2>
+<label class="toggle-row"><span>Vähennä liikettä</span><input id="reduceMotion" type="checkbox"/></label>
+<label class="toggle-row"><span>Tekninen iho oletuksena pois</span><input id="skinDefault" type="checkbox"/></label>
+<p class="microcopy">X-Ray Lens ei anna “totuuspisteitä”. Se kertoo tuloksen epistemisen tyypin: MEASURED, CALCULATED, SIMULATED, USER-REPORTED, HEURISTIC tai INTERPRETATION.</p>
+</article>
+<article class="panel tool-panel">
+<h2>Data &amp; varmuuskopio</h2>
+<p>Varmuuskopiointi ja datan elinkaari ovat System Vaultissa.</p>
+<a class="secondary-button wide" data-route="vault" href="#vault">Avaa System Vault</a>
+</article>
+</div>
+</section>
+</main>
+</div>
+<aside aria-hidden="true" aria-label="Engine Room" class="engine-drawer" id="engineDrawer">
+<div class="drawer-head"><div><p class="eyebrow">ENGINE ROOM</p><h2>POISTA IHO</h2></div><button aria-label="Sulje Engine Room" class="icon-button" id="closeEngine" type="button">×</button></div>
+<p class="drawer-intro">Tämä näkymä erottaa käyttöliittymän väitteet siitä, mitä selainversio oikeasti tekee.</p>
+<div class="engine-grid">
+<div><span>APP EGRESS</span><strong>0</strong><small>CSP connect-src 'self' · external 0</small></div>
+<div><span>RUNTIME</span><strong>STATIC</strong><small>HTML · CSS · JS</small></div>
+<div><span>MODULE CORE</span><strong id="coreHealth">BOOT</strong><small id="coreCount">registry pending</small></div>
+<div><span>CASINO</span><strong>WORKER 2.0</strong><small>multi-run synthetic RNG</small></div>
+<div><span>DEPENDENCY CORE</span><strong>1.2</strong><small>longitudinal descriptive analysis</small></div>
+<div><span>JOURNAL</span><strong>LOCAL</strong><small>structured loop data · localStorage</small></div>
+<div><span>X-RAY LENS</span><strong>6 TYPES</strong><small>epistemic classification</small></div>
+<div><span>UNIVERSAL CORE</span><strong>1.4</strong><small>claim decomposition + shared patterns</small></div>
+<div><span>PATTERN ATLAS</span><strong id="patternHealth">BOOT</strong><small id="patternCount">registry pending</small></div>
+<div><span>OUTCOME CORE</span><strong id="outcomeHealth">BOOT</strong><small id="outcomeCountEngine">descriptive follow-up</small></div>
+<div><span>SYSTEM VAULT</span><strong id="vaultEngineHealth">BOOT</strong><small id="vaultEngineCount">portable local backup</small></div>
+<div><span>INTERCEPT</span><strong>OPT-IN</strong><small>activeTab · no persistent hosts</small></div>
+<div><span>FRICTION CORE</span><strong id="frictionHealth">BOOT</strong><small id="frictionCountEngine">local voluntary rules</small></div>
+<div><span>OS LOCK</span><strong>NOT ACTIVE</strong><small>PWA does not control other apps</small></div>
+<div><span>ODDS CORE</span><strong id="oddsHealth">BOOT</strong><small id="oddsCountEngine">overround · acca · lotto · pari-mutuel</small></div><div><span>MARKET CORE</span><strong id="marketHealth">BOOT</strong><small id="marketCountEngine">random walk · cost drag · leverage</small></div></div>
+<div class="registry-panel">
+<div class="panel-head"><div><p class="eyebrow">MODULE REGISTRY</p><h3>API v1</h3></div><div class="button-row"><button class="ghost-button compact" id="runCoreSelfTest" type="button">Self-test</button><button class="ghost-button compact" id="exportRegistry" type="button">Vie JSON</button></div></div>
+<div class="registry-list" id="moduleRegistryList"></div>
+</div>
+<div aria-live="polite" class="engine-log" id="engineLog"></div>
+<a class="secondary-button wide" data-route="settings" href="#settings" id="engineSettings">Avaa asetukset</a>
+</aside>
+<div class="drawer-backdrop" hidden="" id="drawerBackdrop"></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script defer="" src="pattern-library.js"></script>
+<script defer="" src="module-core.js"></script>
+<script defer="" src="dependency-core.js"></script>
+<script defer="" src="friction-core.js"></script>
+<script defer="" src="outcome-core.js"></script>
+<script defer="" src="vault-core.js"></script>
+<script defer="" src="universal-core.js"></script>
+<script defer="" src="odds-core.js"></script><script defer="" src="market-core.js"></script><script defer="" src="app.js"></script>
+  <script src="/register-pwa.js" defer></script>
+</body>
+</html>
