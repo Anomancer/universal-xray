@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '2.0.0';
+  const VERSION = '2.1.0';
   const KEYS = {
     journal: 'bhc_xray_journal_v1',
     metrics: 'bhc_xray_metrics_v1',
@@ -19,8 +19,9 @@
   const read = (key, fallback) => { try { return safeJson(localStorage.getItem(key), fallback); } catch { return fallback; } };
   const write = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch { return false; } };
   const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
-  const euro = (n) => new Intl.NumberFormat('fi-FI', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(Number(n) || 0);
-  const formatNum = (n, digits = 1) => new Intl.NumberFormat('fi-FI', { maximumFractionDigits: digits }).format(Number(n) || 0);
+  const currentLocale = () => window.BHC_I18N?.locale?.() || 'fi-FI';
+  const euro = (n) => new Intl.NumberFormat(currentLocale(), { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(Number(n) || 0);
+  const formatNum = (n, digits = 1) => new Intl.NumberFormat(currentLocale(), { maximumFractionDigits: digits }).format(Number(n) || 0);
   const isFiniteValue = (v) => v !== null && v !== undefined && v !== '' && Number.isFinite(Number(v));
 
   const state = {
@@ -207,7 +208,7 @@
     const el = $('#engineLog');
     if (!el) return;
     const line = document.createElement('div');
-    line.textContent = `[${new Date().toLocaleTimeString('fi-FI')}] ${message}`;
+    line.textContent = `[${new Date().toLocaleTimeString(currentLocale())}] ${message}`;
     el.prepend(line);
     while (el.children.length > 28) el.lastElementChild.remove();
   };
@@ -899,7 +900,7 @@
     const threshold=$('#outcomeThreshold'); if(threshold){const n=analysis.overall.n; threshold.innerHTML=n<8?`<b>Outcome Lab:</b> ${n}/8 · vielä ${8-n} havaintoa alustavaan yhteenvetoon.`:n<20?`<b>Outcome Lab:</b> ${n} havaintoa · PRELIMINARY alle 20 havainnolla.`:`<b>Outcome Lab:</b> ${n} havaintoa · DESCRIPTIVE. Ei kausaalipäätelmiä.`;}
     const msg=$('#outcomeMessage'); if(msg)msg.innerHTML=`<span class="evidence-badge calculated">CALCULATED</span> <b>${analysis.maturity}</b> · ${escapeHtmlText(analysis.message)}`;
     renderOutcomeGroup('#outcomeDelayGroups',analysis.byDelay); renderOutcomeGroup('#outcomeRuleGroups',analysis.byRule); renderOutcomeGroup('#outcomePatternGroups',analysis.byPattern);
-    const list=$('#outcomeList'); if(list){list.innerHTML='';if(!state.outcomes.length)list.innerHTML='<p class="empty-state">Ei outcome-havaintoja.</p>';const visibleOutcomes=[...state.outcomes].slice(-200).reverse();if(state.outcomes.length>200){const note=document.createElement('p');note.className='list-limit-note';note.textContent=`Näytetään 200 uusinta ${state.outcomes.length} havainnosta. Analyysi ja export käyttävät koko aineistoa.`;list.append(note);}visibleOutcomes.forEach(item=>{const el=document.createElement('article');el.className='journal-entry';const time=document.createElement('time');time.dateTime=item.createdAt;time.textContent=new Date(item.createdAt).toLocaleDateString('fi-FI');const body=document.createElement('div');const pp=document.createElement('p');pp.textContent=item.note||item.reflection||'Ei tekstimuistiinpanoa.';const tags=document.createElement('div');tags.className='entry-tags';tags.append(tag(item.source.toUpperCase()));if(item.urgeDelta!=null)tags.append(tag(`Δ urge ${formatNum(item.urgeDelta,1)}`));tags.append(tag(item.decision));if(item.delayMinutes)tags.append(tag(`${item.delayMinutes} min`));(item.patternIds||[]).slice(0,3).forEach(id=>tags.append(tag(id)));body.append(pp,tags);const del=document.createElement('button');del.type='button';del.textContent='×';del.setAttribute('aria-label','Poista outcome-havainto');del.addEventListener('click',()=>{state.outcomes=state.outcomes.filter(x=>x.id!==item.id);saveOutcomes();});el.append(time,body,del);list.append(el);});}
+    const list=$('#outcomeList'); if(list){list.innerHTML='';if(!state.outcomes.length)list.innerHTML='<p class="empty-state">Ei outcome-havaintoja.</p>';const visibleOutcomes=[...state.outcomes].slice(-200).reverse();if(state.outcomes.length>200){const note=document.createElement('p');note.className='list-limit-note';note.textContent=`Näytetään 200 uusinta ${state.outcomes.length} havainnosta. Analyysi ja export käyttävät koko aineistoa.`;list.append(note);}visibleOutcomes.forEach(item=>{const el=document.createElement('article');el.className='journal-entry';const time=document.createElement('time');time.dateTime=item.createdAt;time.textContent=new Date(item.createdAt).toLocaleDateString(currentLocale());const body=document.createElement('div');const pp=document.createElement('p');pp.textContent=item.note||item.reflection||'Ei tekstimuistiinpanoa.';const tags=document.createElement('div');tags.className='entry-tags';tags.append(tag(item.source.toUpperCase()));if(item.urgeDelta!=null)tags.append(tag(`Δ urge ${formatNum(item.urgeDelta,1)}`));tags.append(tag(item.decision));if(item.delayMinutes)tags.append(tag(`${item.delayMinutes} min`));(item.patternIds||[]).slice(0,3).forEach(id=>tags.append(tag(id)));body.append(pp,tags);const del=document.createElement('button');del.type='button';del.textContent='×';del.setAttribute('aria-label','Poista outcome-havainto');del.addEventListener('click',()=>{state.outcomes=state.outcomes.filter(x=>x.id!==item.id);saveOutcomes();});el.append(time,body,del);list.append(el);});}
   }
   $('#outcomeForm')?.addEventListener('submit',e=>{e.preventDefault();const core=outcomeCore();if(!core)return;const pending=state.pendingOutcome||{};const before=$('#outcomeUrgeBefore').value,after=$('#outcomeUrgeAfter').value,decision=$('#outcomeDecision').value,afterCost=$('#outcomeAfterCost').value,note=$('#outcomeNote').value.trim();if(before===''&&after===''&&decision==='unknown'&&!note)return toast('Kirjaa vähintään yksi outcome-havainto.');const item=core.normalize({...pending,source:pending.source||'manual',frictionSessionId:pending.id||'',urgeBefore:before===''?pending.urgeBefore:before,urgeAfter:after,decision,afterCost,note});state.outcomes.push(item);state.pendingOutcome=null;write(KEYS.pendingOutcome,null);saveOutcomes();e.currentTarget.reset();toast('Outcome tallennettu paikallisesti.');log(`Outcome stored · ${item.decision} · delta ${item.urgeDelta??'NA'}`);});
   $('#exportOutcomes')?.addEventListener('click',()=>{const core=outcomeCore();if(core)downloadJson(`BHC_XRAY_OUTCOMES_${VERSION}.json`,core.exportBundle(state.outcomes));});

@@ -869,3 +869,221 @@ body.engine-open{overflow:hidden}
   .mobile-nav-grid a{min-height:38px;font-size:.72rem}
 }
 @media(prefers-reduced-transparency:reduce){.mobile-nav-backdrop{backdrop-filter:none!important}.mobile-nav:not([hidden]){background:#03111c!important}}
+
+
+/* ==========================================================
+   Universal X-Ray 2.1.0
+   Finnish-first navigation + language layer
+   ========================================================== */
+
+.language-control {
+  display: grid;
+  gap: .25rem;
+  align-items: center;
+  min-width: 70px;
+}
+
+.language-control > span {
+  font-size: .62rem;
+  letter-spacing: .14em;
+  opacity: .65;
+  font-weight: 800;
+}
+
+.language-control select {
+  min-height: 34px;
+  border: 1px solid rgba(88,220,255,.22);
+  background: rgba(2,10,17,.9);
+  color: inherit;
+  border-radius: 8px;
+  padding: 0 .55rem;
+  font-weight: 800;
+}
+
+.main-nav {
+  align-items: center;
+  gap: .35rem;
+  overflow: visible;
+}
+
+.nav-group {
+  position: relative;
+}
+
+.nav-group > summary {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  padding: .58rem .72rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.nav-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-group > summary::after {
+  content: " ▾";
+  opacity: .55;
+}
+
+.nav-group[open] > summary {
+  background: rgba(88,220,255,.08);
+}
+
+.nav-menu {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + .45rem);
+  left: 0;
+  min-width: 220px;
+  display: grid;
+  gap: .2rem;
+  padding: .45rem;
+  border: 1px solid rgba(88,220,255,.18);
+  border-radius: 12px;
+  background: rgba(2,9,15,.98);
+  box-shadow: 0 18px 60px rgba(0,0,0,.44);
+}
+
+.nav-menu a {
+  padding: .65rem .7rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+  background: rgba(88,220,255,.08);
+}
+
+.mobile-nav-section-title {
+  display: block;
+  margin-top: 1rem;
+  padding: .35rem .2rem;
+  font-size: .66rem;
+  letter-spacing: .14em;
+  opacity: .55;
+}
+
+.home-gateways {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: .8rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.gateway-card {
+  min-height: 135px;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(88,220,255,.16);
+  background: rgba(3,14,22,.72);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.gateway-card:hover,
+.gateway-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(88,220,255,.38);
+  background: rgba(5,22,33,.92);
+}
+
+.gateway-card strong {
+  display: block;
+  margin-bottom: .28rem;
+  font-size: 1rem;
+}
+
+.gateway-card small {
+  display: block;
+  line-height: 1.45;
+  opacity: .7;
+}
+
+.gateway-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(88,220,255,.22);
+  font-weight: 900;
+}
+
+.all-tools {
+  margin: 0 0 1rem;
+}
+
+.all-tools > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem .9rem;
+  border: 1px solid rgba(88,220,255,.16);
+  border-radius: 10px;
+  font-weight: 800;
+  background: rgba(3,14,22,.62);
+}
+
+.all-tools > summary::-webkit-details-marker {
+  display: none;
+}
+
+.all-tools > summary::after {
+  content: "＋";
+  opacity: .65;
+}
+
+.all-tools[open] > summary::after {
+  content: "−";
+}
+
+.all-tools .launcher {
+  margin-top: .8rem;
+}
+
+@media (max-width: 1100px) {
+  .home-gateways {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .language-control {
+    min-width: 58px;
+  }
+
+  .language-control > span {
+    display: none;
+  }
+
+  .home-gateways {
+    grid-template-columns: 1fr;
+    gap: .65rem;
+  }
+
+  .gateway-card {
+    min-height: 92px;
+  }
+}
+
+@media (max-width: 520px) {
+  .gateway-card {
+    padding: .85rem;
+  }
+
+  .gateway-icon {
+    width: 38px;
+    height: 38px;
+  }
+}

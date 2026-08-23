@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#02070d" name="theme-color"/>
 <meta content="BHC Universal X-Ray — local-first harm-reduction and manipulation-pattern laboratory." name="description"/>
-<title>BHC Universal X-Ray 2.0.0</title>
+<title>BHC Universal X-Ray 2.1.0</title>
 <link href="icon.svg" rel="icon" type="image/svg+xml"/>
 <link href="manifest.webmanifest" rel="manifest"/>
 <link href="styles.css" rel="stylesheet"/>
@@ -17,8 +17,15 @@
 <div class="site-shell">
 <header class="site-header">
 <div class="brand-row">
-<a aria-label="BHC Universal X-Ray etusivulle" class="brand" data-route="home" href="#home"><span aria-hidden="true" class="brand-rail"></span><span class="brand-copy"><small>BLACK HOLE CORE</small><strong>Universal X-Ray</strong><em>STABLE · 2.0.0</em></span></a>
+<a aria-label="BHC Universal X-Ray etusivulle" class="brand" data-route="home" href="#home"><span aria-hidden="true" class="brand-rail"></span><span class="brand-copy"><small>BLACK HOLE CORE</small><strong>Universal X-Ray</strong><em>STABLE · 2.1.0</em></span></a>
 <div class="header-actions">
+<label class="language-control" title="Kieli / Language">
+<span>KIELI</span>
+<select id="languageSelect" aria-label="Kieli / Language">
+<option value="fi">FI</option>
+<option value="en">EN</option>
+</select>
+</label>
 <label class="lens-control" title="Suodata näkyviä tuloskerroksia epistemisen tyypin mukaan">
 <span>X-RAY LENS</span>
 <select aria-label="X-Ray Lens -tuloskerros" id="evidenceLens">
@@ -31,10 +38,82 @@
 <button aria-controls="mobileNav" aria-expanded="false" class="icon-button menu-button" id="menuToggle" type="button"><span aria-hidden="true">MENU</span><b>Valikko</b></button>
 </div>
 </div>
-<nav aria-label="Päänavigaatio" class="main-nav" id="mainNav"><a class="active" data-route="home" href="#home">Koti</a><a data-route="casino" href="#casino">Casino</a><a data-route="odds" href="#odds">Odds</a><a data-route="market" href="#market">Market</a><a data-route="dependency" href="#dependency">Dependency</a><a data-route="impulse" href="#impulse">Impulse</a><a data-route="universal" href="#universal">Universal</a><a data-route="friction" href="#friction">Friction</a><a data-route="patterns" href="#patterns">Atlas</a><a data-route="outcomes" href="#outcomes">Outcome</a><a data-route="journal" href="#journal">Journal</a><a data-route="calm" href="#calm">Calm</a><a data-route="intercept" href="#intercept">Intercept</a><a data-route="vault" href="#vault">Vault</a></nav>
+<nav aria-label="Päänavigaatio" class="main-nav" id="mainNav">
+<a class="active" data-route="home" href="#home">Etusivu</a>
+
+<details class="nav-group">
+<summary>Analysoi</summary>
+<div class="nav-menu">
+<a data-route="universal" href="#universal">Tekstin röntgen</a>
+<a data-route="patterns" href="#patterns">Kuviokartasto</a>
+<a data-route="intercept" href="#intercept">Selainröntgen</a>
+</div>
+</details>
+
+<details class="nav-group">
+<summary>Pelit &amp; markkinat</summary>
+<div class="nav-menu">
+<a data-route="casino" href="#casino">Kasinomatematiikka</a>
+<a data-route="odds" href="#odds">Vedonlyönti</a>
+<a data-route="market" href="#market">Markkinat</a>
+</div>
+</details>
+
+<details class="nav-group">
+<summary>Oma toiminta</summary>
+<div class="nav-menu">
+<a data-route="dependency" href="#dependency">Toistuvat silmukat</a>
+<a data-route="impulse" href="#impulse">Impulssijarru</a>
+<a data-route="friction" href="#friction">Kitkalaboratorio</a>
+<a data-route="calm" href="#calm">Rauhoittumistila</a>
+</div>
+</details>
+
+<details class="nav-group">
+<summary>Omat havainnot</summary>
+<div class="nav-menu">
+<a data-route="journal" href="#journal">Päiväkirja</a>
+<a data-route="outcomes" href="#outcomes">Seuraukset</a>
+</div>
+</details>
+
+<details class="nav-group">
+<summary>Työkalut</summary>
+<div class="nav-menu">
+<a data-route="vault" href="#vault">Varmuuskopio</a>
+<a data-route="settings" href="#settings">Asetukset</a>
+</div>
+</details>
+</nav>
 
 
-</header><div class="mobile-nav-backdrop" hidden="" id="mobileNavBackdrop"></div><nav aria-hidden="true" aria-label="Mobiilinavigaatio" class="mobile-nav" hidden="" id="mobileNav" tabindex="-1"><div class="mobile-nav-head"><div><small>NAVIGATION</small><strong>Universal X-Ray</strong></div><button aria-label="Sulje valikko" class="mobile-nav-close" id="mobileNavClose" type="button">CLOSE</button></div><label class="mobile-nav-lens"><span>X-RAY LENS</span><select aria-label="Mobiilin X-Ray Lens -tuloskerros" id="mobileEvidenceLens"><option value="all">Kaikki</option><option value="empirical">Mittaus / laskenta / simulaatio</option></select></label><div class="mobile-nav-grid"><a data-route="home" href="#home">Koti</a><a data-route="casino" href="#casino">Casino</a><a data-route="odds" href="#odds">Odds</a><a data-route="market" href="#market">Market</a><a data-route="dependency" href="#dependency">Dependency</a><a data-route="impulse" href="#impulse">Impulse</a><a data-route="universal" href="#universal">Universal</a><a data-route="friction" href="#friction">Friction</a><a data-route="patterns" href="#patterns">Atlas</a><a data-route="outcomes" href="#outcomes">Outcome</a><a data-route="journal" href="#journal">Journal</a><a data-route="calm" href="#calm">Calm</a><a data-route="intercept" href="#intercept">Intercept</a><a data-route="vault" href="#vault">Vault</a><a data-route="settings" href="#settings">Asetukset</a></div></nav>
+</header><div class="mobile-nav-backdrop" hidden="" id="mobileNavBackdrop"></div><nav aria-hidden="true" aria-label="Mobiilinavigaatio" class="mobile-nav" hidden="" id="mobileNav" tabindex="-1"><div class="mobile-nav-head"><div><small>NAVIGATION</small><strong>Universal X-Ray</strong></div><button aria-label="Sulje valikko" class="mobile-nav-close" id="mobileNavClose" type="button">CLOSE</button></div><label class="mobile-nav-lens"><span>X-RAY LENS</span><select aria-label="Mobiilin X-Ray Lens -tuloskerros" id="mobileEvidenceLens"><option value="all">Kaikki</option><option value="empirical">Mittaus / laskenta / simulaatio</option></select></label><div class="mobile-nav-grid">
+<a data-route="home" href="#home">Etusivu</a>
+
+<strong class="mobile-nav-section-title">ANALYSOI</strong>
+<a data-route="universal" href="#universal">Tekstin röntgen</a>
+<a data-route="patterns" href="#patterns">Kuviokartasto</a>
+<a data-route="intercept" href="#intercept">Selainröntgen</a>
+
+<strong class="mobile-nav-section-title">PELIT &amp; MARKKINAT</strong>
+<a data-route="casino" href="#casino">Kasinomatematiikka</a>
+<a data-route="odds" href="#odds">Vedonlyönti</a>
+<a data-route="market" href="#market">Markkinat</a>
+
+<strong class="mobile-nav-section-title">OMA TOIMINTA</strong>
+<a data-route="dependency" href="#dependency">Toistuvat silmukat</a>
+<a data-route="impulse" href="#impulse">Impulssijarru</a>
+<a data-route="friction" href="#friction">Kitkalaboratorio</a>
+<a data-route="calm" href="#calm">Rauhoittumistila</a>
+
+<strong class="mobile-nav-section-title">OMAT HAVAINNOT</strong>
+<a data-route="journal" href="#journal">Päiväkirja</a>
+<a data-route="outcomes" href="#outcomes">Seuraukset</a>
+
+<strong class="mobile-nav-section-title">TYÖKALUT</strong>
+<a data-route="vault" href="#vault">Varmuuskopio</a>
+<a data-route="settings" href="#settings">Asetukset</a>
+</div></nav>
 <main id="mainContent" tabindex="-1">
 <section aria-labelledby="homeTitle" class="screen active" data-screen="home" id="home">
 <div class="hero panel">
@@ -43,7 +122,7 @@
 <img alt="BHC-pesukarhuagentti mustassa paidassa, punaisissa shortseissa ja vesipullo kädessä" src="assets/agent-r01.png"/>
 </div>
 <div class="hero-core">
-<p class="eyebrow">BHC UNIVERSAL X-RAY · 2.0.0 · STABLE</p>
+<p class="eyebrow">BHC UNIVERSAL X-RAY · 2.1.0 · STABLE</p>
 <h1 id="homeTitle">Näe mekanismi.<br/><span>Ota toimijuus takaisin.</span></h1>
 <p class="hero-lede">Riippuvuussilmukat, uhkapelimatematiikka, markkinahype ja manipuloivat rakenteet samassa paikallisessa röntgenlaboratoriossa.</p>
 <div class="hero-actions">
@@ -65,6 +144,45 @@
 <div class="privacy-mark">0</div>
 <div><p class="eyebrow">APP EGRESS</p><h2>Nolla analytiikkaa. Nolla ulkoista käyttäjädatan lähetystä.</h2><p>Laskenta, heuristiikat, Journal ja simulaatiot ajetaan tässä selainversiossa paikallisesti. Service Worker hakee vain saman originin sovellustiedostoja.</p></div>
 </div>
+<div class="home-gateways" aria-label="Päätoiminnot">
+
+<a class="gateway-card" data-route="universal" href="#universal">
+<span class="gateway-icon">⌖</span>
+<div>
+<strong>Tutki tekstiä</strong>
+<small>Väitteet, oletukset, kehystys ja tarkistuskohdat.</small>
+</div>
+</a>
+
+<a class="gateway-card" data-route="casino" href="#casino">
+<span class="gateway-icon">777</span>
+<div>
+<strong>Pelit &amp; markkinat</strong>
+<small>Kasino, vedonlyönti, markkinat ja hype.</small>
+</div>
+</a>
+
+<a class="gateway-card" data-route="dependency" href="#dependency">
+<span class="gateway-icon">◎</span>
+<div>
+<strong>Tutki omaa toimintaa</strong>
+<small>Silmukat, impulssit, kitka ja omat havainnot.</small>
+</div>
+</a>
+
+<a class="gateway-card" data-route="journal" href="#journal">
+<span class="gateway-icon">▤</span>
+<div>
+<strong>Omat havainnot</strong>
+<small>Päiväkirja, seuraukset ja paikallinen aineisto.</small>
+</div>
+</a>
+
+</div>
+
+<details class="all-tools">
+<summary>Kaikki työkalut</summary>
+
 <div aria-label="BHC X-Ray moduulit" class="launcher">
 <a class="app-card" data-route="casino" href="#casino"><span class="app-icon">777</span><b>Casino X-Ray</b><small>RTP · EV · LDIW · simulaatio</small></a><a class="app-card" data-route="odds" href="#odds"><span class="app-icon">1/X</span><b>Odds X-Ray</b><small>Pitkäveto · yhdistelmät · lotto · ravit</small></a><a class="app-card" data-route="market" href="#market"><span class="app-icon">▥</span><b>Market X-Ray</b><small>Kynttilät · null-baseline · kulut · vipu</small></a>
 <a class="app-card" data-route="dependency" href="#dependency"><span class="app-icon">◎</span><b>Dependency Lab</b><small>Trigger → urge → toiminta → palkkio → jälkivaikutus</small></a>
@@ -79,6 +197,7 @@
 <a class="app-card" data-route="vault" href="#vault"><span class="app-icon">◇</span><b>System Vault</b><small>Varmuuskopio · palautus · datan elinkaari</small></a>
 <button class="app-card button-card" id="openEngine" type="button"><span class="app-icon">◐</span><b>Engine Room</b><small>Runtime · provenance · moduulirekisteri</small></button>
 </div>
+</details>
 <div class="dashboard-grid">
 <article class="panel metric-card"><p class="eyebrow">LOCAL STATE</p><strong id="journalCountMetric">0</strong><span>journal-merkintää</span></article>
 <article class="panel metric-card"><p class="eyebrow">LAST CASINO RUN</p><strong id="lastCasinoMetric">—</strong><span>nettotulos</span></article>
@@ -622,7 +741,8 @@
 <script defer="" src="outcome-core.js"></script>
 <script defer="" src="vault-core.js"></script>
 <script defer="" src="universal-core.js"></script>
-<script defer="" src="odds-core.js"></script><script defer="" src="market-core.js"></script><script defer="" src="app.js"></script>
+<script defer="" src="odds-core.js"></script><script defer="" src="market-core.js"></script><script defer="" src="i18n.js"></script>
+<script defer="" src="app.js"></script>
   <script src="/register-pwa.js" defer></script>
 </body>
 </html>
