@@ -433,7 +433,13 @@
         parent.hasAttribute('data-no-i18n')
       ) return;
 
-      node.nodeValue = translateString(node.nodeValue);
+      const original = node.nodeValue;
+      const translated = translateString(original);
+
+      if (translated !== original) {
+        node.nodeValue = translated;
+      }
+
       return;
     }
 
@@ -443,7 +449,12 @@
 
     for (const attr of ['placeholder', 'title', 'aria-label']) {
       if (node.hasAttribute(attr)) {
-        node.setAttribute(attr, translateString(node.getAttribute(attr)));
+        const original = node.getAttribute(attr);
+        const translated = translateString(original);
+
+        if (translated !== original) {
+          node.setAttribute(attr, translated);
+        }
       }
     }
 
